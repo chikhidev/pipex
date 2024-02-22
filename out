@@ -40,4 +40,21 @@ fclean: clean
 
 build: all clean
 
-re: fclean all
+re: fclean allconfig.c
+error.c
+exec.c
+file1
+file2
+ft_printf
+get_next_line
+haha
+libft
+libftprintf.a
+Makefile
+memo.c
+out
+pipex
+pipex.c
+pipex.h
+v2.c
+validation.c
