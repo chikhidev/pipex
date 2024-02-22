@@ -1,5 +1,5 @@
 NAME = pipex
-SRC = pipex.c validation.c error.c config.c memo.c v2.c
+SRC = pipex.c validation.c error.c config.c memo.c v2.c exec.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 LIBFT = libft.a

@@ -20,7 +20,8 @@ typedef struct s_tacker
     int     out_fd;
     int     is_path_available;
     char    **path;
-    int     child_pid;
+    char    **cmd1;
+    char    **cmd2;
     char    *cmd1_path;
     char    *cmd2_path;
 }               t_tracker;
@@ -31,11 +32,14 @@ void    exit_with_message(char *message, t_tracker *tracker);
 
 /*validation*/
 void	validate_args(t_tracker *tracker, int ac, char **av);
-void    free_commands(char **cmd);
+void    free_split(char **split);
 void	check_path_env(char **env, t_tracker *tracker);
 
 /*v2*/
 void    is_executable_command
-(t_tracker *tracker, char *cmd, char *cmd_save);
+(t_tracker *tracker, char *cmd, char **cmd_save);
+
+/*exec*/
+void    handle_execution(t_tracker *tracker);
 
 #endif
