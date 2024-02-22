@@ -64,11 +64,11 @@ void	validate_args(t_tracker *tracker, int ac, char **av)
 	tracker->in_fd = fd;
 	/*validate second file*/
 	if (access(av[4], F_OK) == -1)
-		exit_with_message("Output file does not exist", tracker);
-	fd = open(av[4], O_WRONLY);
-	if (fd == -1)
+		tracker->out_fd = open(av[4], O_CREAT | O_WRONLY);
+	else
+		tracker->out_fd = open(av[4], O_TRUNC | O_WRONLY);
+	if (tracker->out_fd == -1)
 		exit_with_message("Failed to open output file", tracker);
-	tracker->out_fd = fd;
 	/*validate commands*/
 	validate_commands(tracker, av[2], av[3]);
 }
