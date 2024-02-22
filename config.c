@@ -7,14 +7,15 @@ void    init_tracker(t_tracker *tracker)
     tracker->is_path_available = 0;
     tracker->cmd1_path = NULL;
     tracker->cmd2_path = NULL;
+    tracker->path = NULL;
 }
 
-void    look_for_command(t_tracker *tracker)
-{
-    char    *path;
+// void    look_for_command(t_tracker *tracker)
+// {
+//     char    *path;
 
-    path = NULL;
-    if (tracker->is_path_available)
-        path = getenv("PATH");
+//     path = NULL;
+//     if (tracker->is_path_available)
+//         path = getenv("PATH");
     
-}
+// }
