@@ -7,7 +7,6 @@ void    execute_command(t_tracker *tracker, char *cmd, char **args, int *pid)
         exit_with_message("fork failed", tracker);
     if (*pid == 0)
     {
-        printf("executing %s...\n", cmd);
         execve(cmd, args, environ);
         ft_printf("enable to execute %s\n", cmd);
         exit_with_message("execve failed", tracker);
