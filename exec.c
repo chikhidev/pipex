@@ -17,6 +17,7 @@ void    handle_execution(t_tracker *tracker)
 {
     int pid1;
     int pid2;
+    char *line;
 
     dup2(tracker->in_fd, 0);
     dup2(tracker->out_fd, 1);
