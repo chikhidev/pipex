@@ -10,4 +10,6 @@ void    init_tracker(t_tracker *tracker)
     tracker->cmd1_path = NULL;
     tracker->cmd2_path = NULL;
     tracker->path = NULL;
+    tracker->pipe_fd[0] = -1;
+    tracker->pipe_fd[1] = -1;
 }

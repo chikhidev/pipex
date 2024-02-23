@@ -1,0 +1,321 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 166736 11516 ?        Ss   فبراير22   0:01 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    فبراير22   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [netns]
+root           7  0.0  0.0      0     0 ?        I    فبراير22   0:00 [kworker/0:0-events]
+root           8  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/0:0H-events_highpri]
+root          11  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [mm_percpu_wq]
+root          12  0.0  0.0      0     0 ?        I    فبراير22   0:00 [rcu_tasks_kthread]
+root          13  0.0  0.0      0     0 ?        I    فبراير22   0:00 [rcu_tasks_rude_kthread]
+root          14  0.0  0.0      0     0 ?        I    فبراير22   0:00 [rcu_tasks_trace_kthread]
+root          15  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/0]
+root          16  0.0  0.0      0     0 ?        I    فبراير22   0:05 [rcu_preempt]
+root          17  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/0]
+root          18  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/0]
+root          19  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/1]
+root          21  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/1]
+root          22  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/1]
+root          23  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/1]
+root          25  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/1:0H-events_highpri]
+root          26  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/2]
+root          27  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/2]
+root          28  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/2]
+root          29  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/2]
+root          31  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/2:0H-events_highpri]
+root          32  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/3]
+root          33  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/3]
+root          34  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/3]
+root          35  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/3]
+root          37  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/3:0H-kblockd]
+root          38  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/4]
+root          39  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/4]
+root          40  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/4]
+root          41  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/4]
+root          43  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/4:0H-events_highpri]
+root          44  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/5]
+root          45  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/5]
+root          46  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/5]
+root          47  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/5]
+root          49  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/5:0H-kblockd]
+root          50  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/6]
+root          51  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/6]
+root          52  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/6]
+root          53  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/6]
+root          55  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/6:0H-events_highpri]
+root          56  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/7]
+root          57  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/7]
+root          58  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/7]
+root          59  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/7]
+root          61  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/7:0H-events_highpri]
+root          62  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/8]
+root          63  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/8]
+root          64  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/8]
+root          65  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/8]
+root          67  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/8:0H-events_highpri]
+root          68  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/9]
+root          69  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/9]
+root          70  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/9]
+root          71  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/9]
+root          73  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/9:0H-events_highpri]
+root          74  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/10]
+root          75  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/10]
+root          76  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/10]
+root          77  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/10]
+root          79  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/10:0H-events_highpri]
+root          80  0.0  0.0      0     0 ?        S    فبراير22   0:00 [cpuhp/11]
+root          81  0.0  0.0      0     0 ?        S    فبراير22   0:00 [idle_inject/11]
+root          82  0.0  0.0      0     0 ?        S    فبراير22   0:00 [migration/11]
+root          83  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ksoftirqd/11]
+root          85  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/11:0H-events_highpri]
+root          86  0.0  0.0      0     0 ?        S    فبراير22   0:00 [kdevtmpfs]
+root          87  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [inet_frag_wq]
+root          89  0.0  0.0      0     0 ?        S    فبراير22   0:00 [kauditd]
+root          90  0.0  0.0      0     0 ?        S    فبراير22   0:00 [khungtaskd]
+root          91  0.0  0.0      0     0 ?        S    فبراير22   0:00 [oom_reaper]
+root          93  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [writeback]
+root          94  0.0  0.0      0     0 ?        S    فبراير22   0:00 [kcompactd0]
+root          95  0.0  0.0      0     0 ?        SN   فبراير22   0:00 [ksmd]
+root          96  0.0  0.0      0     0 ?        SN   فبراير22   0:00 [khugepaged]
+root          97  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kintegrityd]
+root          98  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kblockd]
+root          99  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [blkcg_punt_bio]
+root         100  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [tpm_dev_wq]
+root         101  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [ata_sff]
+root         102  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [md]
+root         103  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [md_bitmap]
+root         104  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [edac-poller]
+root         105  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [devfreq_wq]
+root         106  0.0  0.0      0     0 ?        S    فبراير22   0:00 [watchdogd]
+root         108  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/0:1H-kblockd]
+root         109  0.0  0.0      0     0 ?        S    فبراير22   0:00 [kswapd0]
+root         110  0.0  0.0      0     0 ?        S    فبراير22   0:00 [ecryptfs-kthread]
+root         111  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kthrotld]
+root         113  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [acpi_thermal_pm]
+root         114  0.0  0.0      0     0 ?        S    فبراير22   0:00 [scsi_eh_0]
+root         115  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [scsi_tmf_0]
+root         116  0.0  0.0      0     0 ?        S    فبراير22   0:00 [scsi_eh_1]
+root         117  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [scsi_tmf_1]
+root         121  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [mld]
+root         122  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [ipv6_addrconf]
+root         129  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/5:1H-kblockd]
+root         135  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kstrp]
+root         138  0.0  0.0      0     0 ?        I    فبراير22   0:00 [kworker/9:1-mm_percpu_wq]
+root         142  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/u25:0]
+root         146  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [charger_manager]
+root         166  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/11:1H-kblockd]
+root         169  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/7:1H-kblockd]
+root         170  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/4:1H-kblockd]
+root         185  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/10:1H-kblockd]
+root         186  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/2:1H-kblockd]
+root         187  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/8:1H-kblockd]
+root         188  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/9:1H-kblockd]
+root         189  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/1:1H-kblockd]
+root         190  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/6:1H-kblockd]
+root         207  0.0  0.0      0     0 ?        S    فبراير22   0:00 [scsi_eh_2]
+root         208  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [scsi_tmf_2]
+root         244  0.0  0.0      0     0 ?        S    فبراير22   0:00 [jbd2/sda3-8]
+root         245  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [ext4-rsv-conver]
+root         285  0.0  0.1  48768 17156 ?        S<s  فبراير22   0:00 /lib/systemd/systemd-journald
+root         337  0.0  0.0  27256  7296 ?        Ss   فبراير22   0:00 /lib/systemd/systemd-udevd
+root         416  0.0  0.0      0     0 ?        I    فبراير22   0:00 [kworker/2:2-events]
+root         421  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [cryptd]
+root         432  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [kworker/3:2H-kblockd]
+root         447  0.0  0.0      0     0 ?        S    فبراير22   0:00 [irq/18-vmwgfx]
+root         448  0.0  0.0      0     0 ?        I<   فبراير22   0:00 [ttm]
+systemd+     696  0.0  0.0  14832  6784 ?        Ss   فبراير22   0:06 /lib/systemd/systemd-oomd
+systemd+     698  0.0  0.1  25932 13792 ?        Ss   فبراير22   0:01 /lib/systemd/systemd-resolved
+systemd+     699  0.0  0.0  89384  7296 ?        Ssl  فبراير22   0:00 /lib/systemd/systemd-timesyncd
+root         740  0.0  0.0 240040  7724 ?        Ssl  فبراير22   0:00 /usr/libexec/accounts-daemon
+root         741  0.0  0.0   2816  1792 ?        Ss   فبراير22   0:00 /usr/sbin/acpid
+avahi        744  0.0  0.0   7632  3840 ?        Ss   فبراير22   0:00 avahi-daemon: running [abdo.local]
+root         745  0.0  0.0   9500  3072 ?        Ss   فبراير22   0:00 /usr/sbin/cron -f -P
+message+     746  0.0  0.0  11100  6144 ?        Ss   فبراير22   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         747  0.0  0.1 261132 18088 ?        Ssl  فبراير22   0:00 /usr/sbin/NetworkManager --no-daemon
+root         754  0.0  0.0  82700  3968 ?        Ssl  فبراير22   0:00 /usr/sbin/irqbalance --foreground
+root         755  0.0  0.1  41044 20992 ?        Ss   فبراير22   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         756  0.0  0.0 242936 10912 ?        Ssl  فبراير22   0:00 /usr/libexec/polkitd --no-debug
+root         757  0.0  0.0 240100  7040 ?        Ssl  فبراير22   0:00 /usr/libexec/power-profiles-daemon
+syslog       758  0.0  0.0 222404  5760 ?        Ssl  فبراير22   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         763  0.0  0.2 1984356 31036 ?       Ssl  فبراير22   0:01 /usr/lib/snapd/snapd
+root         765  0.0  0.0 236384  6528 ?        Ssl  فبراير22   0:00 /usr/libexec/switcheroo-control
+root         768  0.0  0.0  23668  8168 ?        Ss   فبراير22   0:00 /lib/systemd/systemd-logind
+root         771  0.0  0.1 393304 12748 ?        Ssl  فبراير22   0:00 /usr/libexec/udisks2/udisksd
+root         772  0.0  0.0  16500  6656 ?        Ss   فبراير22   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        785  0.0  0.0   7444  1280 ?        S    فبراير22   0:00 avahi-daemon: chroot helper
+root         847  0.0  0.2 118152 23168 ?        Ssl  فبراير22   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         849  0.0  0.1 244228 11700 ?        Ssl  فبراير22   0:00 /usr/sbin/ModemManager
+root         874  0.0  0.0 241356  8960 ?        Ssl  فبراير22   0:00 /usr/sbin/gdm3
+kernoops     910  0.0  0.0  13088  2308 ?        Ss   فبراير22   0:00 /usr/sbin/kerneloops --test
+kernoops     913  0.0  0.0  13088  2192 ?        Ss   فبراير22   0:00 /usr/sbin/kerneloops
+root         940  0.0  0.0   6796  5100 ?        Ss   فبراير22   0:00 /usr/sbin/apache2 -k start
+rtkit       1049  0.0  0.0 154004  3328 ?        SNsl فبراير22   0:00 /usr/libexec/rtkit-daemon
+root        1208  0.0  0.0      0     0 ?        I    فبراير22   0:01 [kworker/5:2-events]
+root        1233  0.0  0.0 242228  8832 ?        Ssl  فبراير22   0:00 /usr/libexec/upowerd
+root        1237  0.0  0.3 373000 38320 ?        Ssl  فبراير22   0:03 /usr/libexec/packagekitd
+root        1405  0.0  0.0      0     0 ?        I    فبراير22   0:00 [kworker/7:3-events]
+colord      1412  0.0  0.1 245480 12864 ?        Ssl  فبراير22   0:00 /usr/libexec/colord
+root        1524  0.0  0.0 318204 10852 ?        Sl   فبراير22   0:00 gdm-session-worker [pam/gdm-password]
+abdo        1534  0.0  0.1  18724 11264 ?        Ss   فبراير22   0:00 /lib/systemd/systemd --user
+abdo        1535  0.0  0.0 170172  5812 ?        S    فبراير22   0:00 (sd-pam)
+abdo        1541  0.0  0.0  39576  6528 ?        S<sl فبراير22   0:00 /usr/bin/pipewire
+abdo        1542  0.0  0.0  23464  6656 ?        Ssl  فبراير22   0:00 /usr/bin/pipewire-media-session
+abdo        1543  0.9  0.3 2209084 33400 ?       S<sl فبراير22   1:40 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+abdo        1544  0.0  0.1  76256 13568 ?        Ss   فبراير22   0:00 /snap/snapd-desktop-integration/83/usr/bin/snapd-desktop-integration
+abdo        1546  0.0  0.0 1079476 8448 ?        Ssl  فبراير22   0:00 /usr/bin/ubuntu-report service
+abdo        1555  0.0  0.0  10508  6660 ?        Ss   فبراير22   0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+abdo        1565  0.0  0.0 240648  7936 ?        Ssl  فبراير22   0:00 /usr/libexec/gvfsd
+abdo        1575  0.0  0.0 380892  6784 ?        Sl   فبراير22   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+abdo        1577  0.0  0.0 536908  7424 ?        Ssl  فبراير22   0:00 /usr/libexec/xdg-document-portal
+abdo        1586  0.0  0.0 388460  7584 ?        Sl   فبراير22   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+abdo        1591  0.0  0.0 236148  6272 ?        Ssl  فبراير22   0:00 /usr/libexec/xdg-permission-store
+root        1598  0.0  0.0   2796  1792 ?        Ss   فبراير22   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+abdo        1615  0.0  0.0 162392  6016 tty2     Ssl+ فبراير22   0:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu
+abdo        1619  0.0  0.1 223044 15872 tty2     Sl+  فبراير22   0:00 /usr/libexec/gnome-session-binary --session=ubuntu
+abdo        1661  0.0  0.2 647864 30092 ?        SNsl فبراير22   0:00 /usr/libexec/tracker-miner-fs-3
+abdo        1668  0.0  0.0  91912  5632 ?        Ssl  فبراير22   0:00 /usr/libexec/gnome-session-ctl --monitor
+abdo        1681  0.0  0.1 519288 17536 ?        Ssl  فبراير22   0:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+abdo        1707 22.7  7.5 7334712 825928 ?      Rsl  فبراير22  38:32 /usr/bin/gnome-shell
+abdo        1708  0.0  0.0 309628  7552 ?        Sl   فبراير22   0:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+abdo        1717  0.0  0.0   8564  4480 ?        S    فبراير22   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+abdo        1793  0.0  0.1 582904 17920 ?        Sl   فبراير22   0:00 /usr/libexec/gnome-shell-calendar-server
+abdo        1794  0.0  0.0 157084  6016 ?        Ssl  فبراير22   0:00 /usr/libexec/dconf-service
+abdo        1800  0.0  0.2 1072176 25984 ?       Ssl  فبراير22   0:00 /usr/libexec/evolution-source-registry
+abdo        1803  0.0  0.0 316064 10752 ?        Ssl  فبراير22   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+abdo        1811  0.0  0.0 315208  8192 ?        Ssl  فبراير22   0:00 /usr/libexec/gvfs-afc-volume-monitor
+abdo        1816  0.0  0.0 236636  6528 ?        Ssl  فبراير22   0:00 /usr/libexec/gvfs-goa-volume-monitor
+abdo        1820  0.0  0.3 578476 40704 ?        Sl   فبراير22   0:00 /usr/libexec/goa-daemon
+abdo        1827  0.0  0.1 338404 15360 ?        Sl   فبراير22   0:00 /usr/libexec/goa-identity-service
+abdo        1832  0.0  0.0 237420  7040 ?        Ssl  فبراير22   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+abdo        1838  0.0  0.0 236464  6784 ?        Ssl  فبراير22   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+abdo        1844  0.0  0.2 840468 30336 ?        Ssl  فبراير22   0:00 /usr/libexec/evolution-calendar-factory
+abdo        1852  0.0  0.4 2932836 48592 ?       Sl   فبراير22   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+abdo        1853  0.0  0.0 162684  7552 ?        Sl   فبراير22   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+abdo        1868  0.0  0.0   2892  1536 ?        Ss   فبراير22   0:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XDG_SESSION_TYPE" = "x11" ] && echo "--xim")
+abdo        1869  0.0  0.0 310432  6784 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-a11y-settings
+abdo        1872  0.0  0.1 389208 12048 ?        Sl   فبراير22   0:03 /usr/bin/ibus-daemon --panel disable
+abdo        1873  0.0  0.2 449312 25344 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-color
+abdo        1874  0.0  0.1 375476 16256 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-datetime
+abdo        1876  0.0  0.0 311932  7552 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-housekeeping
+abdo        1879  0.0  0.1 412568 21504 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-keyboard
+abdo        1881  0.0  0.2 714900 26624 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-media-keys
+abdo        1884  0.0  0.2 448800 25472 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-power
+abdo        1888  0.0  0.1 249856 11008 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-print-notifications
+abdo        1889  0.0  0.0 457860  6528 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-rfkill
+abdo        1890  0.0  0.0 236292  6400 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-screensaver-proxy
+abdo        1891  0.0  0.0 465816 10112 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-sharing
+abdo        1894  0.0  0.0 312312  8064 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-smartcard
+abdo        1898  0.0  0.0 319352  9600 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-sound
+abdo        1899  0.0  0.2 339428 22528 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-wacom
+abdo        1927  0.0  0.0 232268  7424 ?        Sl   فبراير22   0:00 /usr/libexec/gsd-disk-utility-notify
+abdo        1948  0.0  0.5 817104 65536 ?        Sl   فبراير22   0:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+abdo        1961  0.0  0.1 304348 21848 ?        Sl   فبراير22   0:00 /snap/snapd-desktop-integration/83/usr/bin/snapd-desktop-integration
+abdo        1973  0.0  0.0 163484  7296 ?        Sl   فبراير22   0:00 /usr/libexec/ibus-memconf
+abdo        1976  0.0  0.2 346084 29028 ?        Sl   فبراير22   0:01 /usr/libexec/ibus-extension-gtk3
+abdo        1984  0.0  0.0 237264  7424 ?        Sl   فبراير22   0:00 /usr/libexec/ibus-portal
+abdo        2017  0.0  0.0 314876  8960 ?        Sl   فبراير22   0:00 /usr/libexec/gvfsd-trash --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
+abdo        2022  0.0  1.0 912492 113352 ?       Sl   فبراير22   0:01 /snap/snap-store/959/usr/bin/snap-store --gapplication-service
+abdo        2036  0.0  0.0 163612  7680 ?        Sl   فبراير22   0:01 /usr/libexec/ibus-engine-simple
+abdo        2049  0.0  0.1 342364 15104 ?        Sl   فبراير22   0:00 /usr/libexec/gsd-printer
+abdo        2054  0.0  0.2 745976 28288 ?        Ssl  فبراير22   0:00 /usr/libexec/evolution-addressbook-factory
+abdo        2066  0.0  0.1 623800 13824 ?        Ssl  فبراير22   0:00 /usr/libexec/xdg-desktop-portal
+abdo        2098  0.0  0.2 375700 28504 ?        Ssl  فبراير22   0:00 /usr/libexec/xdg-desktop-portal-gnome
+abdo        2192  0.0  0.2 2873936 28104 ?       Sl   فبراير22   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+abdo        2235  0.0  0.2 342756 25840 ?        Ssl  فبراير22   0:00 /usr/libexec/xdg-desktop-portal-gtk
+abdo        2319  0.0  0.0 163016  6656 ?        Ssl  فبراير22   0:00 /usr/libexec/gvfsd-metadata
+abdo        3119  3.4  5.5 12521916 604096 ?     Sl   فبراير22   5:53 /snap/firefox/3836/usr/lib/firefox/firefox
+abdo        3319  0.0  0.4 209300 48512 ?        Sl   فبراير22   0:00 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -parentBuildID 20240214103141 -prefsLen 33239 -prefMapSize 238073 -appDir /snap/firefox/3836/usr/lib/firefox/browser {5a8ea29e-58d8-4a35-b433-f430762deb62} 3119 true socket
+abdo        3339  0.0  1.0 2515168 117208 ?      Sl   فبراير22   0:02 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 33315 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {ec317a87-a2b3-4b70-aac3-6cfc5765058a} 3119 true tab
+abdo        3379  0.0  0.1 1681720 19788 ?       Sl   فبراير22   0:00 /usr/bin/snap userd
+abdo        3455  0.0  2.7 2878976 298436 ?      Sl   فبراير22   0:10 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 37696 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {43ba8206-1ba7-4faa-a872-b42f2776661e} 3119 true tab
+abdo        3566  0.0  0.5 333108 62360 ?        Sl   فبراير22   0:06 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -parentBuildID 20240214103141 -sandboxingKind 0 -prefsLen 38609 -prefMapSize 238073 -appDir /snap/firefox/3836/usr/lib/firefox/browser {235a97c0-7e4d-401b-b64d-29e0bbef93f2} 3119 true utility
+abdo        3818  0.6  0.5 416744 63800 ?        Sl   فبراير22   1:08 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -parentBuildID 20240214103141 -prefsLen 38666 -prefMapSize 238073 -appDir /snap/firefox/3836/usr/lib/firefox/browser {30b92b03-6a46-461c-9fed-ba9bbc8e179f} 3119 true rdd
+abdo        4029  0.0  0.2 419184 31744 ?        Sl   فبراير22   0:00 update-notifier
+abdo        4074  1.1  2.5 3980572 279072 ?      Sl   فبراير22   1:51 /snap/spotify/74/usr/share/spotify/spotify
+abdo        4163  0.0  0.7 466468 80512 ?        S    فبراير22   0:00 /snap/spotify/74/usr/share/spotify/spotify --type=zygote --no-zygote-sandbox --no-sandbox --log-severity=disable --user-agent-product=Chrome/119.0.6045.199 Spotify/1.2.26.1187 --lang=en --user-data-dir=/home/abdo/snap/spotify/common/.cache/spotify --log-file=/snap/spotify/74/usr/share/spotify/debug.log
+abdo        4165  0.0  0.7 466464 80512 ?        S    فبراير22   0:00 /snap/spotify/74/usr/share/spotify/spotify --type=zygote --no-sandbox --log-severity=disable --user-agent-product=Chrome/119.0.6045.199 Spotify/1.2.26.1187 --lang=en --user-data-dir=/home/abdo/snap/spotify/common/.cache/spotify --log-file=/snap/spotify/74/usr/share/spotify/debug.log
+abdo        4173  0.9  1.0 276556 120416 ?       S    فبراير22   1:32 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.4AQQJ2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+abdo        4177  0.0  0.7 531276 80688 ?        Ssl  فبراير22   0:00 /usr/libexec/gsd-xsettings
+abdo        4202  0.0  0.2 194252 25144 ?        Sl   فبراير22   0:00 /usr/libexec/ibus-x11
+abdo        4248  0.0  0.3 762632 40984 ?        Sl   فبراير22   0:00 /snap/spotify/74/usr/share/spotify/spotify --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --no-sandbox --log-severity=disable --user-agent-product=Chrome/119.0.6045.199 Spotify/1.2.26.1187 --lang=en --user-data-dir=/home/abdo/snap/spotify/common/.cache/spotify --log-file=/snap/spotify/74/usr/share/spotify/debug.log --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,712233124922300403,15767641971669422855,262144 --disable-features=BackForwardCache,DocumentPictureInPictureAPI
+abdo        4249  0.0  1.0 1356176 116916 ?      Sl   فبراير22   0:08 /snap/spotify/74/usr/share/spotify/spotify --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-sandbox --log-severity=disable --user-agent-product=Chrome/119.0.6045.199 Spotify/1.2.26.1187 --lang=en --user-data-dir=/home/abdo/snap/spotify/common/.cache/spotify --log-file=/snap/spotify/74/usr/share/spotify/debug.log --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,712233124922300403,15767641971669422855,262144 --disable-features=BackForwardCache,DocumentPictureInPictureAPI
+abdo        4273  1.8  3.6 52786572 398132 ?     Sl   فبراير22   3:10 /snap/spotify/74/usr/share/spotify/spotify --type=renderer --log-severity=disable --user-agent-product=Chrome/119.0.6045.199 Spotify/1.2.26.1187 --disable-spell-checking --user-data-dir=/home/abdo/snap/spotify/common/.cache/spotify --first-renderer-process --no-sandbox --autoplay-policy=no-user-gesture-required --log-file=/snap/spotify/74/usr/share/spotify/debug.log --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1708632585704943 --launch-time-ticks=107751835 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,712233124922300403,15767641971669422855,262144 --disable-features=BackForwardCache,DocumentPictureInPictureAPI
+abdo        4320  0.2  1.4 3845592 158072 ?      Sl   فبراير22   0:26 /snap/spotify/74/usr/share/spotify/spotify --type=gpu-process --no-sandbox --log-severity=disable --user-agent-product=Chrome/119.0.6045.199 Spotify/1.2.26.1187 --lang=en --user-data-dir=/home/abdo/snap/spotify/common/.cache/spotify --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --log-file=/snap/spotify/74/usr/share/spotify/debug.log --shared-files --field-trial-handle=0,i,712233124922300403,15767641971669422855,262144 --disable-features=BackForwardCache,DocumentPictureInPictureAPI
+abdo        4429  0.0  1.9 2673676 218216 ?      Sl   فبراير22   0:04 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 8 -isForBrowser -prefsLen 31234 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {6ca74600-74e8-4d80-99f3-ba89f3eda84b} 3119 true tab
+abdo        4431  0.0  1.6 2601620 184016 ?      Sl   فبراير22   0:05 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 9 -isForBrowser -prefsLen 31234 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {8658e199-f12b-4e45-8773-c628ef64650c} 3119 true tab
+root        4462  0.0  0.0      0     0 ?        I    فبراير22   0:00 [kworker/6:2-rcu_gp]
+abdo        5082  0.0  0.5 558996 57804 ?        Ssl  فبراير22   0:08 /usr/libexec/gnome-terminal-server
+abdo        5100  0.0  0.0  14584  8956 pts/0    Ss   فبراير22   0:00 bash
+abdo        5794  0.0  0.0 117856  8072 ?        Ssl  فبراير22   0:00 /usr/bin/speech-dispatcher -s -t 0
+abdo        5805  0.0  0.0      0     0 ?        Z    فبراير22   0:00 [sd_espeak-ng-mb] <defunct>
+abdo        5808  0.0  0.0 105592  8960 ?        Sl   فبراير22   0:00 /usr/lib/speech-dispatcher-modules/sd_espeak-ng /etc/speech-dispatcher/modules/espeak-ng.conf
+abdo        5811  0.0  0.0 358220  6016 ?        Sl   فبراير22   0:00 /usr/lib/speech-dispatcher-modules/sd_dummy /etc/speech-dispatcher/modules/dummy.conf
+abdo        6708  0.7  1.6 1178631920 186100 ?   SLl  فبراير22   1:07 /usr/share/code/code --unity-launch --crash-reporter-id 42637316-dd0d-4a6e-8155-dad8396d1d22
+abdo        6714  0.0  0.4 33777376 46336 ?      S    فبراير22   0:00 /usr/share/code/code --type=zygote --no-zygote-sandbox
+abdo        6715  0.0  0.4 33777364 45952 ?      S    فبراير22   0:00 /usr/share/code/code --type=zygote
+abdo        6718  0.0  0.1 33777392 11532 ?      S    فبراير22   0:00 /usr/share/code/code --type=zygote
+abdo        6733  0.0  0.0 33575956 3584 ?       Sl   فبراير22   0:00 /usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/abdo/.config/Code/Crashpad --url=appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=42637316-dd0d-4a6e-8155-dad8396d1d22&iid=42637316-dd0d-4a6e-8155-dad8396d1d22&sid=42637316-dd0d-4a6e-8155-dad8396d1d22 --annotation=_companyName=Microsoft --annotation=_productName=VSCode --annotation=_version=1.86.2 --annotation=lsb-release=Ubuntu 22.04.4 LTS --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=27.2.3 --initial-client-fd=42 --shared-client-connection
+abdo        6749  2.1  1.1 34150340 127860 ?     Sl   فبراير22   3:10 /usr/share/code/code --type=gpu-process --crashpad-handler-pid=6733 --enable-crash-reporter=5879b81a-8b5c-402d-8a0f-beb0589dee22,no_channel --user-data-dir=/home/abdo/.config/Code --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=0,i,3756496980989630238,3251817254803373522,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess
+abdo        6754  0.0  0.6 33876756 69912 ?      Sl   فبراير22   0:03 /usr/share/code/code --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=6733 --enable-crash-reporter=5879b81a-8b5c-402d-8a0f-beb0589dee22,no_channel --user-data-dir=/home/abdo/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,3756496980989630238,3251817254803373522,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess
+abdo        6786  6.2  3.2 1191125816 358784 ?   Sl   فبراير22   8:59 /usr/share/code/code --type=renderer --crashpad-handler-pid=6733 --enable-crash-reporter=5879b81a-8b5c-402d-8a0f-beb0589dee22,no_channel --user-data-dir=/home/abdo/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --first-renderer-process --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1708632585704944 --launch-time-ticks=1543939557 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,3756496980989630238,3251817254803373522,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --vscode-window-config=vscode:a8bfd78a-614e-487d-966a-a2c47a05079f
+abdo        6862  0.2  0.9 1178405396 102800 ?   Sl   فبراير22   0:18 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=6733 --enable-crash-reporter=5879b81a-8b5c-402d-8a0f-beb0589dee22,no_channel --user-data-dir=/home/abdo/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,3756496980989630238,3251817254803373522,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess
+abdo        7154  0.0  0.1 281704 11904 ?        Sl   فبراير22   0:00 /usr/libexec/gvfsd-http --spawner :1.2 /org/gtk/gvfs/exec_spaw/1
+abdo        7351  0.0  1.4 2593828 157804 ?      Sl   فبراير22   0:05 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 14 -isForBrowser -prefsLen 31234 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {029eb965-aeed-4fc4-aabb-665670ff5578} 3119 true tab
+root        7404  0.0  0.0      0     0 ?        I    فبراير22   0:00 [kworker/5:1-mm_percpu_wq]
+root        7539  0.0  0.0      0     0 ?        I    فبراير22   0:01 [kworker/u24:2-flush-8:0]
+abdo        7816  0.7  3.5 1188917496 394920 ?   Sl   فبراير22   1:02 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=6733 --enable-crash-reporter=5879b81a-8b5c-402d-8a0f-beb0589dee22,no_channel --user-data-dir=/home/abdo/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,3756496980989630238,3251817254803373522,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess
+abdo        7861  0.5  0.3  99232 42356 ?        Sl   فبراير22   0:45 /home/abdo/.vscode/extensions/ms-vscode.cpptools-1.19.4-linux-x64/bin/cpptools
+abdo        7924  0.0  0.7 1178422284 87272 ?    Sl   فبراير22   0:02 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=6733 --enable-crash-reporter=5879b81a-8b5c-402d-8a0f-beb0589dee22,no_channel --user-data-dir=/home/abdo/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,3756496980989630238,3251817254803373522,262144 --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess
+abdo        8013  0.0  0.1 4269272 20432 ?       Sl   00:00   0:04 /home/abdo/.vscode/extensions/ms-vscode.cpptools-1.19.4-linux-x64/bin/cpptools-srv 7861 {ACEAAB94-0987-4904-8C86-CE5BCD463BA4}
+abdo        8627  0.0  0.0   8084  5888 ?        S    00:13   0:00 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+abdo        9039  0.0  0.7 1178335772 78420 ?    Sl   00:25   0:00 /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=7816
+abdo        9052  0.0  0.1 4267316 17568 ?       Sl   00:25   0:00 /home/abdo/.vscode/extensions/ms-vscode.cpptools-1.19.4-linux-x64/bin/cpptools-srv 7861 {C5392CEA-D60D-4099-BAD6-0680034EF0ED}
+abdo        9964  0.0  0.6 3063592 67544 ?       Sl   01:23   0:01 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1920:1080:1:27:0:0:0:0
+abdo       10266  0.0  1.4 2509196 155784 ?      Sl   01:28   0:01 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 18 -isForBrowser -prefsLen 31285 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {d8ad26a8-406e-4e85-80eb-a1754cb50f5c} 3119 true tab
+root       10298  0.0  0.0      0     0 ?        I    01:28   0:00 [kworker/11:0-mm_percpu_wq]
+root       10484  0.0  0.0      0     0 ?        I    01:29   0:00 [kworker/10:2-events]
+abdo       10518  0.1  1.7 2563852 191548 ?      Sl   01:29   0:03 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 24 -isForBrowser -prefsLen 31285 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {f82fa15c-79db-4f8d-ba92-83b6c06362d9} 3119 true tab
+abdo       10576  0.0  1.3 2676016 147136 ?      Sl   01:30   0:02 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 25 -isForBrowser -prefsLen 31285 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {981d1129-3ecf-4562-8e0a-6327fb2ffd1d} 3119 true tab
+abdo       10665  5.3  3.9 2985784 435468 ?      Sl   01:31   2:22 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 28 -isForBrowser -prefsLen 31285 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {d1b97e5f-4a4e-40ce-905f-b450efb1e4ed} 3119 true tab
+root       11294  0.0  0.0      0     0 ?        I    01:39   0:00 [kworker/9:0]
+root       11296  0.0  0.0      0     0 ?        I    01:40   0:00 [kworker/4:1-events]
+root       11297  0.0  0.0      0     0 ?        I    01:40   0:00 [kworker/1:1-events]
+abdo       11434  0.1  1.5 2616884 173944 ?      Sl   01:42   0:03 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 33 -isForBrowser -prefsLen 31285 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {53ff622e-4cea-4110-afc6-d52e205ee099} 3119 true tab
+root       11466  0.0  0.0      0     0 ?        I    01:42   0:00 [kworker/3:0-events]
+www-data   11574  0.0  0.0 1998188 4620 ?        Sl   01:43   0:00 /usr/sbin/apache2 -k start
+www-data   11575  0.0  0.0 1998188 4620 ?        Sl   01:43   0:00 /usr/sbin/apache2 -k start
+root       11638  0.0  0.1  72884 13952 ?        Ss   01:43   0:00 /usr/sbin/cupsd -l
+root       11661  0.0  0.0      0     0 ?        I    01:43   0:00 [kworker/2:3-inet_frag_wq]
+lp         11666  0.0  0.0  16288  6656 ?        S    01:43   0:00 /usr/lib/cups/notifier/dbus dbus://
+lp         11667  0.0  0.0  16288  6656 ?        S    01:43   0:00 /usr/lib/cups/notifier/dbus dbus://
+lp         11668  0.0  0.0  16288  6656 ?        S    01:43   0:00 /usr/lib/cups/notifier/dbus dbus://
+lp         11669  0.0  0.0  16288  6656 ?        S    01:43   0:00 /usr/lib/cups/notifier/dbus dbus://
+root       11671  0.0  0.1 172628 11648 ?        Ssl  01:43   0:00 /usr/sbin/cups-browsed
+root       11777  0.0  0.0      0     0 ?        I    01:43   0:00 [kworker/8:0-inet_frag_wq]
+abdo       12434  0.1  1.5 682516 173288 ?       SNl  01:45   0:02 /usr/bin/python3 /usr/bin/update-manager --no-update --no-focus-on-map
+root       13209  0.0  0.0      0     0 ?        I    01:52   0:00 [kworker/0:1]
+root       13253  0.0  0.0      0     0 ?        I    01:53   0:00 [kworker/3:1-mm_percpu_wq]
+root       13546  0.0  0.0      0     0 ?        I    02:01   0:00 [kworker/u24:1-events_unbound]
+root       13562  0.0  0.0      0     0 ?        I    02:02   0:00 [kworker/6:1-events]
+root       13563  0.0  0.0      0     0 ?        I    02:02   0:00 [kworker/4:0-inet_frag_wq]
+root       13659  0.0  0.0      0     0 ?        I    02:03   0:00 [kworker/8:2-mm_percpu_wq]
+root       13660  0.0  0.0      0     0 ?        I    02:03   0:00 [kworker/10:0-events]
+root       14240  0.0  0.0      0     0 ?        I    02:09   0:00 [kworker/11:1-inet_frag_wq]
+root       14413  0.0  0.0      0     0 ?        I    02:09   0:00 [kworker/1:2-events]
+root       14414  0.0  0.0      0     0 ?        I    02:09   0:00 [kworker/7:0]
+abdo       14435  0.0  0.6 2388652 71808 ?       Sl   02:10   0:00 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 41 -isForBrowser -prefsLen 31281 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {beda7e9f-f2ee-40fe-949e-ef980979a5ef} 3119 true tab
+root       14613  0.0  0.0      0     0 ?        I    02:10   0:00 [kworker/u24:3-ext4-rsv-conversion]
+root       14614  0.0  0.0      0     0 ?        I    02:11   0:00 [kworker/8:1]
+abdo       14696  0.0  0.6 2388664 71424 ?       Sl   02:12   0:00 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 42 -isForBrowser -prefsLen 31281 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {b81bb29f-e219-4105-b57e-cca72f0653b0} 3119 true tab
+root       14735  0.0  0.0      0     0 ?        I    02:12   0:00 [kworker/0:2-events]
+abdo       14762  0.0  0.6 2388664 72320 ?       Sl   02:13   0:00 /snap/firefox/3836/usr/lib/firefox/firefox -contentproc -childID 43 -isForBrowser -prefsLen 31281 -prefMapSize 238073 -jsInitLen 235124 -parentBuildID 20240214103141 -greomni /snap/firefox/3836/usr/lib/firefox/omni.ja -appomni /snap/firefox/3836/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/3836/usr/lib/firefox/browser {d3f87112-83c7-40dd-b6e8-6b6afed5f576} 3119 true tab
+root       14932  0.0  0.0      0     0 ?        I    02:14   0:00 [kworker/5:0-mm_percpu_wq]
+root       14933  0.0  0.0      0     0 ?        I    02:14   0:00 [kworker/4:2-events]
+root       14945  0.0  0.0      0     0 ?        I    02:14   0:00 [kworker/10:1-mm_percpu_wq]
+root       14948  0.0  0.0      0     0 ?        I    02:14   0:00 [kworker/2:0]
+abdo       14973  0.0  0.0   2784  1024 pts/0    S+   02:16   0:00 ./pipex Makefile ps -aux grep /bin outfile
+abdo       14974  0.0  0.0  13076  3840 pts/0    R+   02:16   0:00 ps -aux
+abdo       14975  0.0  0.0      0     0 pts/0    Z+   02:16   0:00 [grep] <defunct>

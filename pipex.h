@@ -18,6 +18,7 @@ typedef struct s_tacker
 {
     int     in_fd;
     int     out_fd;
+    int     pipe_fd[2];
     int     is_path_available;
     char    **path;
     char    **cmd1;

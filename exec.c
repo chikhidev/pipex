@@ -17,13 +17,23 @@ void    handle_execution(t_tracker *tracker)
 {
     int pid1;
     int pid2;
-    char *line;
 
-    dup2(tracker->in_fd, 0);
-    dup2(tracker->out_fd, 1);
+    /*creating pipe*/
+    if (pipe(tracker->pipe_fd) == -1)
+        exit_with_message("pipe failed", tracker);
 
+    // printf("file descriptors of pipe: %d %d\n", tracker->pipe_fd[0], tracker->pipe_fd[1]);
+
+    (void)pid1;
+    (void)pid2;
     /*logic of executing*/
+    dup2(tracker->pipe_fd[1], 1);
+    dup2(tracker->in_fd, 0);
     execute_command(tracker, tracker->cmd1_path, tracker->cmd1, &pid1);
+    close(tracker->pipe_fd[1]);
+
+    dup2(tracker->pipe_fd[0], 0);
+    dup2(tracker->out_fd, 1);
     execute_command(tracker, tracker->cmd2_path, tracker->cmd2, &pid2);
 
     /*wait for the processes*/
@@ -31,6 +41,7 @@ void    handle_execution(t_tracker *tracker)
     waitpid(pid2, NULL, 0);
 
     /*closing fds to prevent problems*/
+    close(tracker->pipe_fd[0]);
     close(tracker->in_fd);
     close(tracker->out_fd);
 }
