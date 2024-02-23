@@ -10,7 +10,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT) $(GNL) $(FT_PRINTF)
 	@echo "Linking..."
-	@cc $(OBJ) $(GNL) $(LIBFT) $(FT_PRINTF) -o $(NAME) #-fsanitize=address
+	@cc $(OBJ) $(GNL) $(LIBFT) $(FT_PRINTF) -o $(NAME)
 
 $(OBJ): $(SRC)
 	@echo "Compiling..."

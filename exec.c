@@ -17,27 +17,27 @@ void    handle_execution(t_tracker *tracker)
 {
     int pid1;
     int pid2;
+    int stdin;
+    int stdout;
 
-    /*creating pipe*/
+    stdin = dup(0);
+    stdout = dup(1);
     if (pipe(tracker->pipe_fd) == -1)
         exit_with_message("pipe failed", tracker);
-
-    /*logic of executing*/
     dup2(tracker->pipe_fd[1], 1);
     dup2(tracker->in_fd, 0);
     execute_command(tracker, tracker->cmd1_path, tracker->cmd1, &pid1);
     close(tracker->pipe_fd[1]);
-
     dup2(tracker->pipe_fd[0], 0);
     dup2(tracker->out_fd, 1);
     execute_command(tracker, tracker->cmd2_path, tracker->cmd2, &pid2);
-
-    /*wait for the processes*/
     waitpid(pid1, NULL, 0);
     waitpid(pid2, NULL, 0);
-
-    /*closing fds to prevent problems*/
     close(tracker->pipe_fd[0]);
     close(tracker->in_fd);
     close(tracker->out_fd);
+    dup2(stdin, 0);
+    dup2(stdout, 1);
+    close(stdin);
+    close(stdout);
 }

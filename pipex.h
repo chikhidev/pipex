@@ -43,4 +43,7 @@ void    is_executable_command
 /*exec*/
 void    handle_execution(t_tracker *tracker);
 
+/*memory*/
+void    free_all(t_tracker *tracker);
+
 #endif
