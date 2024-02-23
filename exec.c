@@ -22,10 +22,6 @@ void    handle_execution(t_tracker *tracker)
     if (pipe(tracker->pipe_fd) == -1)
         exit_with_message("pipe failed", tracker);
 
-    // printf("file descriptors of pipe: %d %d\n", tracker->pipe_fd[0], tracker->pipe_fd[1]);
-
-    (void)pid1;
-    (void)pid2;
     /*logic of executing*/
     dup2(tracker->pipe_fd[1], 1);
     dup2(tracker->in_fd, 0);
