@@ -18,6 +18,7 @@ typedef struct s_command
 {
     char    *cmd_path;
     char    **cmd_args;
+    int     pid;
     struct  s_command *next;
 }            t_command;
 

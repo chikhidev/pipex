@@ -32,8 +32,12 @@ t_command   *create_command (char *cmd, t_tracker *tracker)
     t_command   *command;
 
     command = malloc(sizeof(t_command));
-    command->cmd_path = get_cmd_path(cmd, tracker);
     command->cmd_args = ft_split(cmd, ' ');
+    if (command->cmd_args)
+        command->cmd_path = get_cmd_path(command->cmd_args[0], tracker);
+    else
+        command->cmd_path = NULL;
+    command->pid = -1;
     command->next = NULL;
     return (command);
 }
@@ -59,7 +63,7 @@ void    store_commands (char **av, int ac, t_tracker *tracker)
     int         i;
 
     i = 0;
-    while (i < (ac - 2))
+    while (i < (ac - 3))
     {
         cmd = create_command(av[i + 2], tracker);
         push_command(cmd, tracker);
