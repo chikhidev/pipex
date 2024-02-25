@@ -1,5 +1,26 @@
 #include "pipex.h"
 
+void    check_path_env(t_tracker *tracker)
+{
+    int i;
+    char *path;
+
+    i = 0;
+    while (environ[i])
+    {
+        if (ft_strncmp(environ[i], "PATH=", 5) == 0)
+        {
+            path = ft_strchr(environ[i], '/');
+            tracker->path = ft_split(path, ':');
+            if (!tracker->path)
+                exit_with_message("unable to split path env", tracker);
+            tracker->is_path_available = 1;
+            return ;
+        }
+        i++;
+    }
+}
+
 void validate_existness_of_command
 (t_tracker *tracker, char *cmd, char **cmd_save, int *found)
 {

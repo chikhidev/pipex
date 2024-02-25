@@ -14,34 +14,44 @@
 
 extern char **environ;
 
+typedef struct s_command
+{
+    char    *cmd_path;
+    char    **cmd_args;
+    struct  s_command *next;
+}            t_command;
+
 typedef struct s_tacker
 {
-    int     in_fd;
-    int     out_fd;
-    int     pipe_fd[2];
-    int     is_path_available;
-    char    **path;
-    char    **cmd1;
-    char    **cmd2;
-    char    *cmd1_path;
-    char    *cmd2_path;
+    int         in_fd;
+    int         out_fd;
+    int         pipe_fd[2];
+    int         is_path_available;
+    char        **path;
+    t_command   *first_command;
+    int         problem;
 }               t_tracker;
 
 /*config*/
 void    init_tracker(t_tracker *tracker);
+
 void    exit_with_message(char *message, t_tracker *tracker);
 
 /*validation*/
-void	validate_args(t_tracker *tracker, int ac, char **av);
+void   validate_in_out_files(char **av, int ac, t_tracker *tracker);
+void    check_path_env(t_tracker *tracker);
 void    free_split(char **split);
-void	check_path_env(char **env, t_tracker *tracker);
+
+/*command*/
+void   store_commands (char **av, int ac, t_tracker *tracker);
+
 
 /*v2*/
 void    is_executable_command
 (t_tracker *tracker, char *cmd, char **cmd_save);
 
 /*exec*/
-void    handle_execution(t_tracker *tracker);
+// void    handle_execution(t_tracker *tracker);
 
 /*memory*/
 void    free_all(t_tracker *tracker);

@@ -1,0 +1,16 @@
+config.c
+error.c
+exec.c
+ft_printf
+get_next_line
+libft
+libftprintf.a
+Makefile
+memo.c
+outFile
+pipex
+pipex.c
+pipex.h
+script.sh
+v2.c
+validation.c

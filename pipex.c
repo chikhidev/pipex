@@ -15,18 +15,27 @@
 int main(int ac, char **av)
 {
     t_tracker   tracker;
-    
+    // t_command	*cmd;
+
+    if (ac != 5)
+        exit_with_message("Invalid number of arguments", &tracker);
     init_tracker(&tracker);
-    validate_args(&tracker, ac, av);
-    check_path_env(environ, &tracker);
-    is_executable_command(&tracker, tracker.cmd1[0], &tracker.cmd1_path);
-    is_executable_command(&tracker, tracker.cmd2[0], &tracker.cmd2_path);
-    free(tracker.cmd1[0]);
-    free(tracker.cmd2[0]);
-    tracker.cmd1[0] = tracker.cmd1_path;
-    tracker.cmd2[0] = tracker.cmd2_path;
-    handle_execution(&tracker);
-    free_all(&tracker);
-    /*check memo leaks*/
+    validate_in_out_files(av, ac, &tracker);
+    check_path_env(&tracker);
+    store_commands(av, ac, &tracker);
+
+
+    t_command *cmd;
+    cmd = tracker.first_command;
+    while (cmd)
+    {
+        ft_printf("cmd_path: %s\n", cmd->cmd_path);
+        ft_printf("cmd_args: \n");
+        for (int i = 0; cmd->cmd_args[i]; i++)
+            ft_printf("\t%s\n", cmd->cmd_args[i]);
+        ft_printf("\n\n-------------------\n");
+        cmd = cmd->next;
+    }
+
     return (0);
 }
