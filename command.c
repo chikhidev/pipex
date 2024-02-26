@@ -22,9 +22,7 @@ char    *get_cmd_path(char *cmd, t_tracker *tracker)
             i++;
         }
     }
-    if (access(cmd, F_OK) == 0)
-        return (cmd);
-    return (NULL);
+    return (cmd);
 }
 
 t_command   *create_command (char *cmd, t_tracker *tracker)
