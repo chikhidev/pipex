@@ -23,19 +23,19 @@ int main(int ac, char **av)
     validate_in_out_files(av, ac, &tracker);
     check_path_env(&tracker);
     store_commands(av, ac, &tracker);
+    execute_commands(&tracker);
 
-
-    t_command *cmd;
-    cmd = tracker.first_command;
-    while (cmd)
-    {
-        ft_printf("cmd_path: %s\n", cmd->cmd_path);
-        ft_printf("cmd_args: \n");
-        for (int i = 0; cmd->cmd_args[i]; i++)
-            ft_printf("\t%s\n", cmd->cmd_args[i]);
-        ft_printf("\n\n-------------------\n");
-        cmd = cmd->next;
-    }
+    // t_command *cmd;
+    // cmd = tracker.first_command;
+    // while (cmd)
+    // {
+    //     ft_printf("cmd_path: %s\n", cmd->cmd_path);
+    //     ft_printf("cmd_args: \n");
+    //     for (int i = 0; cmd->cmd_args[i]; i++)
+    //         ft_printf("\t%s\n", cmd->cmd_args[i]);
+    //     ft_printf("\n\n-------------------\n");
+    //     cmd = cmd->next;
+    // }
 
     return (0);
 }

@@ -70,6 +70,3 @@ void    store_commands (char **av, int ac, t_tracker *tracker)
         i++;
     }
 }
-
-//ac = 5
-//

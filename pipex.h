@@ -42,6 +42,7 @@ void    exit_with_message(char *message, t_tracker *tracker);
 void   validate_in_out_files(char **av, int ac, t_tracker *tracker);
 void    check_path_env(t_tracker *tracker);
 void    free_split(char **split);
+void    execute_commands(t_tracker *tracker);
 
 /*command*/
 void   store_commands (char **av, int ac, t_tracker *tracker);
