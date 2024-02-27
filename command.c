@@ -31,11 +31,10 @@ t_command   *create_command (char *cmd, t_tracker *tracker)
 
     command = malloc(sizeof(t_command));
     command->cmd_args = ft_split(cmd, ' ');
-    if (command->cmd_args)
+    if (command->cmd_args && ft_strlen(cmd) != 0)
         command->cmd_path = get_cmd_path(command->cmd_args[0], tracker);
     else
         command->cmd_path = NULL;
-    command->pid = -1;
     command->next = NULL;
     return (command);
 }

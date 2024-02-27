@@ -17,8 +17,8 @@ int main(int ac, char **av)
     t_tracker   tracker;
     // t_command	*cmd;
 
-    if (ac != 5)
-        exit_with_message("Invalid number of arguments", &tracker);
+    // if (ac != 5)
+    //     exit_with_message("Invalid number of arguments", &tracker);
     init_tracker(&tracker);
     validate_in_out_files(av, ac, &tracker);
     check_path_env(&tracker);

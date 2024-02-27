@@ -18,7 +18,6 @@ typedef struct s_command
 {
     char    *cmd_path;
     char    **cmd_args;
-    int     pid;
     struct  s_command *next;
 }            t_command;
 
@@ -30,7 +29,9 @@ typedef struct s_tacker
     int         is_path_available;
     char        **path;
     t_command   *first_command;
-    int         problem;
+    int         in;
+    int         out;
+    int         current_process_id;
 }               t_tracker;
 
 /*config*/

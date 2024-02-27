@@ -10,7 +10,7 @@ void    validate_in_out_files (char **av, int ac, t_tracker *tracker)
     if (tracker->in_fd == -1)
         exit_with_message("Invalid input file", tracker);
     if (access(av[ac - 1], F_OK) == -1)
-        tracker->in_fd = open(av[ac - 1], O_CREAT | O_WRONLY, 0644);
+        tracker->out_fd = open(av[ac - 1], O_CREAT | O_WRONLY, 0644);
     else
     {
         if (access(av[ac - 1], W_OK) == -1)

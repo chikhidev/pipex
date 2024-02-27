@@ -9,4 +9,7 @@ void    init_tracker(t_tracker *tracker)
     tracker->path = NULL;
     tracker->pipe_fd[0] = -1;
     tracker->pipe_fd[1] = -1;
+    tracker->in = -1;
+    tracker->out = -1;
+    tracker->current_process_id = -1;
 }
