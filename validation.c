@@ -11,9 +11,11 @@ void    validate_in_out_files(t_data *data, int ac, char **av)
         error(data, "Invalid input file", 1);
     if (access(av[ac - 1], F_OK) == -1)
     {
-        data->output_file = open(av[ac - 1], O_CREAT | O_WRONLY | O_TRUNC);
+        data->output_file = open(av[ac - 1], O_CREAT | O_WRONLY | 0644);
         if (data->output_file == -1)
             error(data, "Failed to create the file (output file)", 1);
+        if (access(av[ac - 1], W_OK) == -1)
+            error(data, "Unable to have write permission", 1);
     }
     else
     {
