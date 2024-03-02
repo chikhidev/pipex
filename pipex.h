@@ -28,7 +28,8 @@ typedef struct s_data
 }   t_data;
 
 void    init(t_data *data);
-void    error(char *msg, int status);
+void    error(t_data *data, char *msg, int status);
 void    validate_in_out_files(t_data *data,int ac, char **av);
+void    free_all(t_data *data);
 
 #endif
