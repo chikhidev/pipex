@@ -1,5 +1,14 @@
 #include "pipex.h"
 
+void    ft_free(void    *ptr)
+{
+    if (ptr)
+    {
+        free(ptr);
+        ptr = NULL;
+    }
+}
+
 void    free_split(char **split)
 {
     int i;
@@ -7,10 +16,10 @@ void    free_split(char **split)
     i = 0;
     while (split[i])
     {
-        free(split[i]);
+        ft_free(split[i]);
         i++;
     }
-    free(split);
+    ft_free(split);
 }
 
 void    free_cmds(t_data *data)
@@ -22,8 +31,11 @@ void    free_cmds(t_data *data)
     while (curr)
     {
         tmp = curr->next;
-        free_split(curr->args);
-        free(curr->path);
+        if (curr->args)
+            free_split(curr->args);
+        if (curr->path)
+            ft_free(curr->path);
+        ft_free(curr);
         curr = tmp;
     }
 }

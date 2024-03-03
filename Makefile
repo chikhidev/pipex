@@ -3,6 +3,7 @@ SRC = main.c	\
 	  init.c	\
 	  error.c	\
 	  memory.c	\
+	  cmd.c		\
 	  validation.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror

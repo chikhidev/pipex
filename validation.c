@@ -11,7 +11,7 @@ void    validate_in_out_files(t_data *data, int ac, char **av)
         error(data, "Invalid input file", 1);
     if (access(av[ac - 1], F_OK) == -1)
     {
-        data->output_file = open(av[ac - 1], O_CREAT | O_WRONLY | 0644);
+        data->output_file = open(av[ac - 1], O_CREAT | O_WRONLY, 0644);
         if (data->output_file == -1)
             error(data, "Failed to create the file (output file)", 1);
         if (access(av[ac - 1], W_OK) == -1)
@@ -24,5 +24,26 @@ void    validate_in_out_files(t_data *data, int ac, char **av)
         data->output_file = open(av[ac - 1], O_WRONLY | O_TRUNC);
         if (data->output_file == -1)
             error(data, "Invalid output file", 1);
+    }
+}
+
+void    check_path_env(t_data *data)
+{
+    int i;
+    char *path;
+
+    i = 0;
+    while (environ[i])
+    {
+        if (ft_strncmp(environ[i], "PATH=", 5) == 0)
+        {
+            path = ft_strchr(environ[i], '/');
+            data->path = ft_split(path, ':');
+            if (!data->path)
+                error(data, "Failed to allocate memory (path)", 1);
+            data->path_available = 1;
+            return ;
+        }
+        i++;
     }
 }

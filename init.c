@@ -6,6 +6,7 @@ void    init(t_data *data)
     data->path = NULL;
     data->input_file = -1;
     data->output_file = -1;
-    data->pipe_fd[0] = -1;
-    data->pipe_fd[1] = -1;
+    data->pipe[0] = -1;
+    data->pipe[1] = -1;
+    data->ps_child = -1;
 }

@@ -9,6 +9,8 @@
 
 #include "libft/libft.h"
 
+extern char **environ;
+
 typedef struct s_cmd
 {
     char    *path;
@@ -19,10 +21,12 @@ typedef struct s_cmd
 typedef struct s_data
 {
     t_cmd   *head_cmd;
+    int     path_available;
     char    **path;
+    pid_t   ps_child;
     int     input_file;
     int     output_file;
-    int     pipe_fd[2];
+    int     pipe[2];
     int     _stdin_;
     int     _stdout_;
 }   t_data;
@@ -30,6 +34,10 @@ typedef struct s_data
 void    init(t_data *data);
 void    error(t_data *data, char *msg, int status);
 void    validate_in_out_files(t_data *data,int ac, char **av);
+void    launch_pipeline(t_data *data);
+void    check_path_env(t_data *data);
+void    generate_cmds(t_data *data, char **av);
+void    ft_free(void *ptr);
 void    free_all(t_data *data);
 
 #endif
