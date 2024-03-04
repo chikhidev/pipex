@@ -6,6 +6,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 
 #include "libft/libft.h"
 
@@ -23,7 +24,7 @@ typedef struct s_data
     t_cmd   *head_cmd;
     int     path_available;
     char    **path;
-    pid_t   ps_child;
+    pid_t   child_pid;
     int     input_file;
     int     output_file;
     int     pipe[2];
@@ -34,9 +35,9 @@ typedef struct s_data
 void    init(t_data *data);
 void    error(t_data *data, char *msg, int status);
 void    validate_in_out_files(t_data *data,int ac, char **av);
-void    launch_pipeline(t_data *data);
 void    check_path_env(t_data *data);
 void    generate_cmds(t_data *data, char **av);
+void    execute_cmds(t_data *data);
 void    ft_free(void *ptr);
 void    free_all(t_data *data);
 

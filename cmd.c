@@ -61,9 +61,3 @@ void    generate_cmds(t_data *data, char **av)
         i++;
     }
 }
-
-void    launch_pipeline(t_data *data)
-{
-    if (pipe(data->pipe) == -1)
-        error(data, "Failed to create pipe", 1);
-}

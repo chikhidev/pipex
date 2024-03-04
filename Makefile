@@ -4,6 +4,7 @@ SRC = main.c	\
 	  error.c	\
 	  memory.c	\
 	  cmd.c		\
+	  exec.c	\
 	  validation.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
@@ -32,7 +33,6 @@ clean:
 	@echo "Cleaning..."
 	@make -C libft clean
 	@rm -f $(OBJ) $(LIBFT)
-	@make -C clean
 
 fclean: clean
 	@echo "Full cleaning..."

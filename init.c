@@ -8,5 +8,5 @@ void    init(t_data *data)
     data->output_file = -1;
     data->pipe[0] = -1;
     data->pipe[1] = -1;
-    data->ps_child = -1;
+    data->child_pid = -1;
 }
