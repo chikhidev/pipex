@@ -33,6 +33,8 @@ typedef struct s_data
 }   t_data;
 
 void    init(t_data *data);
+void    make_input(int  fd);
+void    make_output(int fd);
 void    error(t_data *data, char *msg, int status);
 void    validate_in_out_files(t_data *data,int ac, char **av);
 void    check_path_env(t_data *data);
