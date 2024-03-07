@@ -50,12 +50,12 @@ void    create_cmd(t_data *data, char *cmd)
     }
 }
 
-void    generate_cmds(t_data *data, char **av)
+void    generate_cmds(t_data *data, char **av, int ac)
 {
     int i;
 
     i = 2;
-    while (i < 4)
+    while (i < (ac - 1))
     {
         create_cmd(data, av[i]);
         i++;

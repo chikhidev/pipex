@@ -2,12 +2,14 @@
 
 void    make_input(int  fd)
 {
-    dup2(fd, STDIN_FILENO);
+    if (fd != -1)
+        dup2(fd, STDIN_FILENO);
 }
 
 void    make_output(int fd)
 {
-    dup2(fd, STDOUT_FILENO);
+    if (fd != -1)
+        dup2(fd, STDOUT_FILENO);
 }
 
 void    init(t_data *data)
