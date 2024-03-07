@@ -40,12 +40,16 @@ void    create_cmd(t_data *data, char *cmd)
         error(data, "Failed to allocate memory (args)", 1);
     new->next = NULL;
     if (!data->head_cmd)
+    {
         data->head_cmd = new;
+        data->head_cmd->prev = NULL;
+    }
     else
     {
         curr = data->head_cmd;
         while (curr->next)
             curr = curr->next;
+        new->prev = curr;
         curr->next = new;
     }
 }

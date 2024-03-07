@@ -16,7 +16,9 @@ typedef struct s_cmd
 {
     char    *path;
     char    **args;
+    int     pipe[2];
     struct s_cmd    *next;
+    struct s_cmd    *prev;
 }   t_cmd;
 
 typedef struct s_data
@@ -27,7 +29,6 @@ typedef struct s_data
     pid_t   child_pid;
     int     input_file;
     int     output_file;
-    int     pipe[2];
 }   t_data;
 
 void    init(t_data *data);
