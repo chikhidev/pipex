@@ -22,6 +22,13 @@ void    free_split(char **split)
     ft_free(split);
 }
 
+void    free_cmd(t_cmd *cmd)
+{
+    ft_free(cmd->path);
+    free_split(cmd->args);
+    ft_free(cmd);
+}
+
 void    free_cmds(t_data *data)
 {
     t_cmd   *tmp;
@@ -31,11 +38,7 @@ void    free_cmds(t_data *data)
     while (curr)
     {
         tmp = curr->next;
-        if (curr->args)
-            free_split(curr->args);
-        if (curr->path)
-            ft_free(curr->path);
-        ft_free(curr);
+        free_cmd(curr);
         curr = tmp;
     }
 }

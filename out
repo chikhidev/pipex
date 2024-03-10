@@ -1,0 +1,15 @@
+Makefile
+a.out
+cmd.c
+error.c
+exec.c
+init.c
+libft
+main.c
+memory.c
+out
+pipex
+pipex.h
+script.sh
+test.c
+validation.c

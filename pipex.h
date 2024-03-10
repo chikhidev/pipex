@@ -38,8 +38,11 @@ void    error(t_data *data, char *msg, int status);
 void    validate_in_out_files(t_data *data,int ac, char **av);
 void    check_path_env(t_data *data);
 void    generate_cmds(t_data *data, char **av, int ac);
+void    launch_pipes(t_data *data);
 void    execute_cmds(t_data *data);
 void    ft_free(void *ptr);
+void    free_split(char **split);
+void    free_cmd(t_cmd *cmd);
 void    free_all(t_data *data);
 
 #endif
