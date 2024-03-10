@@ -16,7 +16,7 @@ typedef struct s_cmd
 {
     char    *path;
     char    **args;
-    int     pipe[2];
+    int     entries[2];
     struct s_cmd    *next;
     struct s_cmd    *prev;
 }   t_cmd;
