@@ -1,19 +1,30 @@
 #include "pipex.h"
 
-void    make_input(int  fd)
+void    make_input(t_data *data, int  fd)
 {
+    char *str;
+
     if (fd == -1)
         return ;
-    dup2(fd, STDIN_FILENO);
-    write(2, "input made\n", 12);//debug
+    if (dup2(fd, STDIN_FILENO) == - 1)
+        error(data, "dup2 failed", 1);
+    str = ft_itoa(fd);
+    write(2, str, ft_strlen(str));//debug
+    write(2, " is the input file\n", 20);//debug
+    ft_free(str);
 }
 
-void    make_output(int fd)
+void    make_output(t_data *data, int fd)
 {
+    char *str;
     if (fd == -1)
         return ;
-    dup2(fd, STDOUT_FILENO);
-    write(2, "output made\n", 13);//debug
+    if (dup2(fd, STDOUT_FILENO) == -1)
+        error(data, "dup2 failed", 1);
+    str = ft_itoa(fd);
+    write(2, str, ft_strlen(str));//debug
+    write(2, " is the output file\n", 20);//debug
+    ft_free(str);
 }
 
 void    init(t_data *data)

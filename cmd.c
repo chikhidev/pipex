@@ -39,17 +39,15 @@ void    create_cmd(t_data *data, char *path, char **args)
     new->next = NULL;
     if (!data->head_cmd)
     {
+        new->prev = NULL;
         data->head_cmd = new;
-        data->head_cmd->prev = NULL;
+        return ;
     }
-    else
-    {
-        curr = data->head_cmd;
-        while (curr->next)
-            curr = curr->next;
-        new->prev = curr;
-        curr->next = new;
-    }
+    curr = data->head_cmd;
+    while (curr->next)
+        curr = curr->next;
+    new->prev = curr;
+    curr->next = new;
 }
 
 void    generate_cmds(t_data *data, char **av, int ac)
@@ -68,7 +66,8 @@ void    generate_cmds(t_data *data, char **av, int ac)
         if (access(path, F_OK) != 0)
         {
             perror(av[i]);
-            free(path);
+            free_split(args);
+            ft_free(path);
         }
         else
             create_cmd(data, path, args);
@@ -76,18 +75,16 @@ void    generate_cmds(t_data *data, char **av, int ac)
     }
 }
 
-void    launch_pipes(t_data *data)
+void    launch_pipe(t_data *data, t_cmd *cmd)
 {
-    t_cmd   *curr;
-
-    curr = data->head_cmd;
-    while (curr)
+    if (cmd->next)
     {
-        if (curr->next)
-        {
-            if (pipe(curr->entries) == -1)
-                error(data, "pipe failed", 1);
-        }
-        curr = curr->next;
+        if (pipe(cmd->entries) == -1)
+            error(data, "pipe failed", 1);
+    }
+    else
+    {
+        cmd->entries[0] = -1;
+        cmd->entries[1] = -1;
     }
 }

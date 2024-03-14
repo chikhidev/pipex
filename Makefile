@@ -11,6 +11,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBFT = libft.a
 # FT_PRINTF = libftprintf.a
 
+
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT)
@@ -38,6 +39,7 @@ fclean: clean
 	@echo "Full cleaning..."
 	@rm -f $(NAME)
 
-build: all clean
+b: all clean
+	clear
 
 re: fclean all
