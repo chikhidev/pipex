@@ -1,2 +1,0 @@
-	@cc $(OBJ) $(LIBFT) -o $(NAME)
-	@cc $(CFLAGS) -c $(SRC)

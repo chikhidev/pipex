@@ -32,6 +32,7 @@ typedef struct s_data
 }   t_data;
 
 void    init(t_data *data);
+void    ft_close(int *fd);
 void    make_input(t_data *data, int  fd);
 void    make_output(t_data *data, int fd);
 void    error(t_data *data, char *msg, int status);

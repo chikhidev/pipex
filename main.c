@@ -13,10 +13,10 @@ int main(int ac, char **av)
 
     printf("input: %d\n", data.input_file);
     printf("output: %d\n", data.output_file);
-
     execute_cmds(&data);
+    while (wait(NULL) > 0);
     free_all(&data);
-    close(data.input_file);
-    close(data.output_file);
+    ft_close(&data.input_file);
+    ft_close(&data.output_file);
     return (0);
 }

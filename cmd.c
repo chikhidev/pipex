@@ -37,6 +37,8 @@ void    create_cmd(t_data *data, char *path, char **args)
     new->args = args;
     new->path = path;
     new->next = NULL;
+    new->entries[0] = -1;
+    new->entries[1] = -1;
     if (!data->head_cmd)
     {
         new->prev = NULL;
@@ -81,10 +83,5 @@ void    launch_pipe(t_data *data, t_cmd *cmd)
     {
         if (pipe(cmd->entries) == -1)
             error(data, "pipe failed", 1);
-    }
-    else
-    {
-        cmd->entries[0] = -1;
-        cmd->entries[1] = -1;
     }
 }
