@@ -1,4 +1,5 @@
-#include "pipex.h"
+#include "./pipex.h"
+
 
 void    validate_in_out_files(t_data *data, int ac, char **av)
 {

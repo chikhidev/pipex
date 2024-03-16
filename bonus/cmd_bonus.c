@@ -1,4 +1,4 @@
-#include "pipex.h"
+#include "./pipex_bonus.h"
 
 char    *get_cmd_path(t_data *data, char *cmd)
 {
