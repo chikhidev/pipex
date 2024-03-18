@@ -10,8 +10,6 @@
 
 #include "../libft/libft.h"
 
-extern char **environ;
-
 typedef struct s_cmd
 {
     char    *path;
@@ -23,6 +21,7 @@ typedef struct s_cmd
 
 typedef struct s_data
 {
+    char    **env;
     t_cmd   *head_cmd;
     int     path_available;
     char    **path;

@@ -12,19 +12,6 @@ void    manage_fds(t_data *data, t_cmd *cmd)
         make_output(data, data->output_file);
 }
 
-void    close_unused_fds(t_data *data)
-{
-    t_cmd *tmp;
-
-    tmp = data->head_cmd;
-    while (tmp)
-    {
-        ft_close(&tmp->entries[0]);
-        ft_close(&tmp->entries[1]);
-        tmp = tmp->next;
-    }
-}
-
 void    execute_cmd(t_data *data, t_cmd *cmd)
 {
     pid_t   pid;
@@ -36,7 +23,7 @@ void    execute_cmd(t_data *data, t_cmd *cmd)
     {
         ft_close(&cmd->entries[0]);
         manage_fds(data, cmd);
-        execve(cmd->path, cmd->args, environ);
+        execve(cmd->path, cmd->args, data->env);
         perror(cmd->path);
         exit(1);
     }
@@ -61,7 +48,6 @@ void    execute_cmds(t_data *data)
             ft_close(&curr_cmd->prev->prev->entries[0]);
             ft_close(&curr_cmd->prev->prev->entries[1]);
         }
-
         curr_cmd = curr_cmd->next;
         cmd_index += 1;
     }

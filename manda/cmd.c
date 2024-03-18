@@ -66,14 +66,7 @@ void    generate_cmds(t_data *data, char **av, int ac)
         if (!args)
             error(data, "Failed to allocate memory (args)", 1);
         path = get_cmd_path(data, ft_strdup(args[0]));
-        if (access(path, F_OK) != 0)
-        {
-            perror(av[i]);
-            free_split(args);
-            ft_free(path);
-        }
-        else
-            create_cmd(data, path, args);
+        create_cmd(data, path, args);
         i++;
     }
 }

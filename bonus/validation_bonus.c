@@ -33,11 +33,11 @@ void    check_path_env(t_data *data)
     char *path;
 
     i = 0;
-    while (environ[i])
+    while (data->env[i])
     {
-        if (ft_strncmp(environ[i], "PATH=", 5) == 0)
+        if (ft_strncmp(data->env[i], "PATH=", 5) == 0)
         {
-            path = ft_strchr(environ[i], '/');
+            path = ft_strchr(data->env[i], '/');
             data->path = ft_split(path, ':');
             if (!data->path)
                 error(data, "Failed to allocate memory (path)", 1);

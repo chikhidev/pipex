@@ -21,6 +21,7 @@ OBJ = $(SRC:.c=.o)
 BOBJ = $(BSRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 LIBFT = libft.a
+GNL = get_next_line.o
 
 all: $(NAME)
 bonus: $(BONUS)
@@ -29,17 +30,21 @@ $(NAME): $(OBJ) $(LIBFT)
 	@echo "Linking..."
 	@cc $(OBJ) $(LIBFT) -o $(NAME)
 
-$(BONUS): $(BOBJ) $(LIBFT)
+$(BONUS): $(BOBJ) $(LIBFT) $(GNL)
 	@echo "Linking..."
-	@cc $(BSRC:.c=.o) $(LIBFT) -o $(BONUS)
+	@cc $(BSRC:.c=.o) $(GNL) $(LIBFT) -o $(BONUS)
 
 $(LIBFT):
 	@echo "Compiling libft..."
 	@make -C ./libft && mv ./libft/$(LIBFT) .
 
+$(GNL):
+	@echo "Compiling get_next_line..."
+	@cc -c get_next_line/get_next_line.c -o get_next_line.o
+
 clean:
 	@echo "Cleaning..."
-	@rm -f $(OBJ) $(LIBFT) $(BOBJ)
+	@rm -f $(OBJ) $(LIBFT) $(BOBJ) $(GNL)
 
 fclean: clean
 	@echo "Full cleaning..."

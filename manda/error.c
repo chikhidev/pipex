@@ -1,6 +1,5 @@
 #include "./pipex.h"
 
-
 void    ft_close(int *fd)
 {
     if (*fd != -1)

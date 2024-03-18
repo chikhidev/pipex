@@ -9,8 +9,7 @@
 #include <sys/wait.h>
 
 #include "../libft/libft.h"
-
-extern char **environ;
+#include "../get_next_line/get_next_line.h"
 
 typedef struct s_cmd
 {
@@ -23,9 +22,12 @@ typedef struct s_cmd
 
 typedef struct s_data
 {
+    char    **env;
     t_cmd   *head_cmd;
     int     path_available;
     char    **path;
+    char    *limiter;
+    int     here_doc_pipe[2];
     pid_t   child_pid;
     int     input_file;
     int     output_file;
@@ -38,7 +40,7 @@ void    make_output(t_data *data, int fd);
 void    error(t_data *data, char *msg, int status);
 void    validate_in_out_files(t_data *data,int ac, char **av);
 void    check_path_env(t_data *data);
-void    generate_cmds(t_data *data, char **av, int ac);
+void    generate_cmds(t_data *data, char **av, int ac, int start);
 void    launch_pipe(t_data *data, t_cmd *cmd);
 void    execute_cmds(t_data *data);
 void    ft_free(void *ptr);
