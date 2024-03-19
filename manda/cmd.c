@@ -5,7 +5,12 @@ void    launch_pipe(t_data *data, t_cmd *cmd)
     if (cmd->next)
     {
         if (pipe(cmd->entries) == -1)
-            error(data, "pipe failed", 1);
+            error(data, "pipe failed");
+    }
+    else
+    {
+        cmd->entries[0] = -1;
+        cmd->entries[1] = -1;
     }
 }
 
@@ -22,10 +27,10 @@ char    *get_cmd_path(t_data *data, char *cmd)
         {
             tmp = ft_strjoin(data->path[i], "/");
             if (!tmp)
-                error(data, "Error: str_join failed", 1);
+                error(data, "Error: str_join failed");
             path = ft_strjoin(tmp, cmd);
             if (!path)
-                error(data, "Error: str_join failed", 1);
+                error(data, "Error: str_join failed");
             ft_free(tmp);
             if (access(path, F_OK) == 0)
             {
@@ -46,7 +51,7 @@ void    create_cmd(t_data *data, char *path, char **args)
 
     new = malloc(sizeof(t_cmd));
     if (!new)
-        error(data, "Failed to allocate memory (path)", 1);
+        error(data, "Failed to allocate memory (path)");
     new->args = args;
     new->path = path;
     new->next = NULL;
@@ -75,7 +80,7 @@ void    generate_cmds(t_data *data, char **av, int ac)
     {
         args = ft_split(av[i], ' ');
         if (!args)
-            error(data, "Failed to allocate memory (args)", 1);
+            error(data, "Failed to allocate memory (args)");
         path = get_cmd_path(data, ft_strdup(args[0]));
         create_cmd(data, path, args);
         i++;

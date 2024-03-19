@@ -8,7 +8,7 @@ void    make_input(t_data *data, int  fd)
         return;
     }
     if (dup2(fd, STDIN_FILENO) == - 1)
-        error(data, "dup2 failed", 1);
+        error(data, "dup2 failed");
 }
 
 void    make_output(t_data *data, int fd)
@@ -19,7 +19,7 @@ void    make_output(t_data *data, int fd)
         return;
     }
     if (dup2(fd, STDOUT_FILENO) == -1)
-        error(data, "dup2 failed", 1);
+        error(data, "dup2 failed");
 }
 
 void    init(t_data *data)
@@ -29,5 +29,5 @@ void    init(t_data *data)
     data->path = NULL;
     data->input_file = -1;
     data->output_file = -1;
-    *data->exit_value = 1;
+    data->exit_value = 0;
 }

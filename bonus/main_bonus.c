@@ -7,7 +7,6 @@ void    serve_normal_behav(t_data *data, char **av, int ac, char **env)
     check_path_env(data);
     generate_cmds(data, av, ac, 2);
     execute_cmds(data);
-    while (wait(NULL) > 0);
     free_all(data);
     ft_close(&data->input_file);
     ft_close(&data->output_file);
@@ -40,7 +39,7 @@ int main(int ac, char **av, char **env)
         printf("here_doc is called\n");
         data.limiter = av[2];
         if (pipe(data.here_doc_pipe) == -1)
-            error(&data, "Pipe failed", 1);
+            error(&data, "Pipe failed");
         data.input_file = data.here_doc_pipe[0];
         data.output_file = open(av[ac - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
         data.env = env;
@@ -55,6 +54,6 @@ int main(int ac, char **av, char **env)
     else if (ac >= 5)
         serve_normal_behav(&data, av, ac, env);
     else
-        error(&data, "Invalid number of arguments", 1);
+        error(&data, "Invalid number of arguments");
     return (0);
 }

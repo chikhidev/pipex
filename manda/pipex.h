@@ -7,6 +7,7 @@
 # include <fcntl.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <signal.h>
 
 #include "../libft/libft.h"
 
@@ -26,7 +27,7 @@ typedef struct s_data
     t_cmd   *head_cmd;
     int     path_available;
     char    **path;
-    int     *exit_value;
+    int     exit_value;
     int     input_file;
     int     output_file;
 }   t_data;
@@ -35,7 +36,7 @@ void    init(t_data *data);
 void    ft_close(int *fd);
 void    make_input(t_data *data, int  fd);
 void    make_output(t_data *data, int fd);
-void    error(t_data *data, char *msg, int status);
+void    error(t_data *data, char *msg);
 void    validate_in_out_files(t_data *data,int ac, char **av);
 void    check_path_env(t_data *data);
 void    generate_cmds(t_data *data, char **av, int ac);

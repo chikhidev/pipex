@@ -46,6 +46,7 @@ $(GNL):
 
 clean:
 	@echo "Cleaning..."
+	@make -C ./libft clean
 	@rm -f $(OBJ) $(LIBFT) $(BOBJ) $(GNL)
 
 fclean: clean

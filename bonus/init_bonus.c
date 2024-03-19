@@ -5,7 +5,7 @@ void    make_input(t_data *data, int  fd)
     if (fd == -1)
         return ;
     if (dup2(fd, STDIN_FILENO) == - 1)
-        error(data, "dup2 failed", 1);
+        error(data, "dup2 failed");
 }
 
 void    make_output(t_data *data, int fd)
@@ -13,7 +13,7 @@ void    make_output(t_data *data, int fd)
     if (fd == -1)
         return ;
     if (dup2(fd, STDOUT_FILENO) == -1)
-        error(data, "dup2 failed", 1);
+        error(data, "dup2 failed");
 }
 
 void    init(t_data *data)
