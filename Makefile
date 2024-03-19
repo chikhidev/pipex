@@ -38,7 +38,7 @@ $(BONUS): $(BOBJ) $(LIBFT) $(GNL)
 
 $(LIBFT):
 	@echo "Compiling libft..."
-	@make -C ./libft && mv ./libft/$(LIBFT) .
+	@make -C ./libft && mv ./libft/libft.a .
 
 $(GNL):
 	@echo "Compiling get_next_line..."
