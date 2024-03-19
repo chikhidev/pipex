@@ -21,7 +21,8 @@ void execute_cmd(t_data *data, t_cmd *cmd) {
     if (pid == -1)
     {
         perror("fork");
-        exit(EXIT_FAILURE);
+        free_all(data);
+        exit(1);
     }
     else if (pid == 0)
     {
