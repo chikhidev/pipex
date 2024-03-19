@@ -1,5 +1,13 @@
 #include "./pipex.h"
 
+void    launch_pipe(t_data *data, t_cmd *cmd)
+{
+    if (cmd->next)
+    {
+        if (pipe(cmd->entries) == -1)
+            error(data, "pipe failed", 1);
+    }
+}
 
 char    *get_cmd_path(t_data *data, char *cmd)
 {
@@ -42,8 +50,6 @@ void    create_cmd(t_data *data, char *path, char **args)
     new->args = args;
     new->path = path;
     new->next = NULL;
-    new->entries[0] = -1;
-    new->entries[1] = -1;
     if (!data->head_cmd)
     {
         new->prev = NULL;
@@ -62,6 +68,7 @@ void    generate_cmds(t_data *data, char **av, int ac)
     int     i;
     char    *path;
     char    **args;
+    t_cmd   *cmd;
 
     i = 2;
     while (i < (ac - 1))
@@ -73,13 +80,10 @@ void    generate_cmds(t_data *data, char **av, int ac)
         create_cmd(data, path, args);
         i++;
     }
-}
-
-void    launch_pipe(t_data *data, t_cmd *cmd)
-{
-    if (cmd->next)
+    cmd = data->head_cmd;
+    while (cmd)
     {
-        if (pipe(cmd->entries) == -1)
-            error(data, "pipe failed", 1);
+        launch_pipe(data, cmd);
+        cmd = cmd->next;
     }
 }

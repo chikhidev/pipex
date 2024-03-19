@@ -15,6 +15,7 @@ typedef struct s_cmd
     char    *path;
     char    **args;
     int     entries[2];
+    pid_t   child_pid;
     struct s_cmd    *next;
     struct s_cmd    *prev;
 }   t_cmd;
@@ -25,7 +26,7 @@ typedef struct s_data
     t_cmd   *head_cmd;
     int     path_available;
     char    **path;
-    pid_t   child_pid;
+    int     *exit_value;
     int     input_file;
     int     output_file;
 }   t_data;

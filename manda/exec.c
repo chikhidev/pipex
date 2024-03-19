@@ -12,6 +12,24 @@ void    manage_fds(t_data *data, t_cmd *cmd)
         make_output(data, data->output_file);
 }
 
+void    free_unused(t_data *data, t_cmd *cmd)
+{
+    t_cmd   *tmp;
+
+    tmp = data->head_cmd;
+    while (tmp)
+    {
+        if (tmp != cmd && tmp != cmd->prev)
+            free_cmd(tmp);
+        if (tmp == cmd->prev)
+        {
+            ft_free(tmp->path);
+            free_split(tmp->args);
+        }
+        tmp = tmp->next;
+    }
+}
+
 void    execute_cmd(t_data *data, t_cmd *cmd)
 {
     pid_t   pid;
@@ -23,9 +41,10 @@ void    execute_cmd(t_data *data, t_cmd *cmd)
     {
         ft_close(&cmd->entries[0]);
         manage_fds(data, cmd);
+        free_unused(data, cmd);
         execve(cmd->path, cmd->args, data->env);
         perror(cmd->path);
-        exit(1);
+        exit(data->exit_value);
     }
     else
         ft_close(&cmd->entries[1]);
@@ -41,14 +60,7 @@ void    execute_cmds(t_data *data)
 
     while (curr_cmd)
     {
-        launch_pipe(data, curr_cmd);
         execute_cmd(data, curr_cmd);
-        if (curr_cmd->prev && curr_cmd->prev->prev)
-        {
-            ft_close(&curr_cmd->prev->prev->entries[0]);
-            ft_close(&curr_cmd->prev->prev->entries[1]);
-        }
-
         curr_cmd = curr_cmd->next;
         cmd_index += 1;
     }

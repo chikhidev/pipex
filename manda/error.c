@@ -9,7 +9,7 @@ void    ft_close(int *fd)
     }
 }
 
-void    error(t_data *data, char *msg, int status)
+void    error(t_data *data, char *msg)
 {
     int len;
     int i;
@@ -33,5 +33,5 @@ void    error(t_data *data, char *msg, int status)
     }
     write(2, "\n", 1);
     free_all(data);
-    exit(status);
+    exit(data->exit_value);
 }

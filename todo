@@ -1,0 +1,4 @@
+- handle waitpid
+- handle ./path
+- handle input file is not available
+- handle exit value

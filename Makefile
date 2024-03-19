@@ -25,6 +25,8 @@ GNL = get_next_line.o
 
 all: $(NAME)
 bonus: $(BONUS)
+d: all clean
+b: bonus clean
 
 $(NAME): $(OBJ) $(LIBFT)
 	@echo "Linking..."

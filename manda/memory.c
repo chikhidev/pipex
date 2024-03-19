@@ -1,6 +1,5 @@
 #include "./pipex.h"
 
-
 void    ft_free(void    *ptr)
 {
     if (ptr)
@@ -27,6 +26,8 @@ void    free_cmd(t_cmd *cmd)
 {
     ft_free(cmd->path);
     free_split(cmd->args);
+    ft_close(&cmd->entries[0]);
+    ft_close(&cmd->entries[1]);
     ft_free(cmd);
 }
 
