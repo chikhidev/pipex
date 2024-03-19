@@ -45,10 +45,16 @@ void    execute_cmd(t_data *data, t_cmd *cmd)
         execve(cmd->path, cmd->args, data->env);
         write(2, cmd->args[0], ft_strlen(cmd->args[0]));
         write(2, ": command not found\n", 21);
-        exit(data->exit_value);
+        exit(1);
     }
     else
+    {
         ft_close(&cmd->entries[1]);
+        if (cmd->prev) {
+            ft_close(&cmd->prev->entries[0]);
+            ft_close(&cmd->prev->entries[1]);
+        }
+    }
 }
 
 void    wait_for_childs(t_data *data)
