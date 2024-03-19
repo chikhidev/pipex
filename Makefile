@@ -1,43 +1,53 @@
 NAME = pipex
-SRC = pipex.c validation.c error.c config.c memo.c v2.c exec.c command.c
+BONUS = pipex_bonus
+
+SRC = manda/main.c    \
+      manda/init.c    \
+      manda/error.c   \
+      manda/memory.c  \
+      manda/cmd.c     \
+      manda/exec.c    \
+      manda/validation.c
+
+BSRC = bonus/main_bonus.c       \
+       bonus/init_bonus.c       \
+       bonus/error_bonus.c      \
+       bonus/memory_bonus.c     \
+       bonus/cmd_bonus.c        \
+       bonus/exec_bonus.c       \
+       bonus/validation_bonus.c
+
 OBJ = $(SRC:.c=.o)
+BOBJ = $(BSRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 LIBFT = libft.a
 GNL = get_next_line.o
-FT_PRINTF = libftprintf.a
 
 all: $(NAME)
+bonus: $(BONUS)
 
-$(NAME): $(OBJ) $(LIBFT) $(GNL) $(FT_PRINTF)
+$(NAME): $(OBJ) $(LIBFT)
 	@echo "Linking..."
-	@cc $(OBJ) $(GNL) $(LIBFT) $(FT_PRINTF) -o $(NAME)
+	@cc $(OBJ) $(LIBFT) -o $(NAME)
 
-$(OBJ): $(SRC)
-	@echo "Compiling..."
-	@cc $(CFLAGS) -c $(SRC)
+$(BONUS): $(BOBJ) $(LIBFT) $(GNL)
+	@echo "Linking..."
+	@cc $(BSRC:.c=.o) $(GNL) $(LIBFT) -o $(BONUS)
 
-libft.a:
+$(LIBFT):
 	@echo "Compiling libft..."
-	@make -C libft && mv libft/$(LIBFT) .
+	@make -C ./libft && mv ./libft/$(LIBFT) .
 
-get_next_line.o:
+$(GNL):
 	@echo "Compiling get_next_line..."
-	@cc $(CFLAGS) -c get_next_line/get_next_line.c -o $(GNL)
-
-$(FT_PRINTF):
-	@echo "Compiling ft_printf..."
-	@make -C ft_printf && mv ft_printf/$(FT_PRINTF) .
+	@cc -c get_next_line/get_next_line.c -o get_next_line.o
 
 clean:
 	@echo "Cleaning..."
-	@make -C libft clean
-	@rm -f $(OBJ) $(GNL) $(LIBFT)
-	@make -C ft_printf clean
+	@rm -f $(OBJ) $(LIBFT) $(BOBJ) $(GNL)
 
 fclean: clean
 	@echo "Full cleaning..."
-	@rm -f $(NAME)
-
-build: all clean
+	@rm -f $(NAME) $(BONUS)
 
 re: fclean all

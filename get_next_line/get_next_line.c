@@ -12,21 +12,6 @@
 
 #include "get_next_line.h"
 
-char	*ft_strchr(const char *s, int c)
-{
-	if (!s)
-		return (NULL);
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
-	}
-	if (*s == (char)c)
-		return ((char *)s);
-	return (NULL);
-}
-
 int	extract_line(t_store *store, char **saved, int is_last)
 {
 	int	to_return;
@@ -96,7 +81,7 @@ int	store_line(char **saved, t_store *store, int fd)
 	return (1);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, char *limiter)
 {
 	static char	*saved;
 	t_store		store;
@@ -105,5 +90,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	if (!store_line(&saved, &store, fd))
 		return (NULL);
+	if (ft_strncmp(store.line, limiter, ft_strlen(limiter)) == 0 && ft_strlen(limiter) == (ft_strlen(store.line) - 1))
+		free(saved);
 	return (store.line);
 }

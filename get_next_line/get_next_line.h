@@ -21,8 +21,10 @@
 # include <limits.h>
 # include <sys/select.h>
 
+#include "../libft/libft.h"
+
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 1
 # endif
 
 # if BUFFER_SIZE > 2147483646
@@ -40,13 +42,6 @@ typedef struct s_store
 	char	*line;
 }	t_store;
 
-char	*ft_strdup(const char *s1);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-char	*ft_strchr(const char *s, int c);
-size_t	ft_strlen(const char *str);
-
-char	*get_next_line(int fd);
+char	*get_next_line(int fd, char *limiter);
 
 #endif
