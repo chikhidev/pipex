@@ -31,7 +31,7 @@ void    free_cmd(t_cmd *cmd)
     ft_free(cmd);
 }
 
-void    free_cmds(t_data *data)
+void    free_cmds(t_data *data, t_cmd *exception)
 {
     t_cmd   *tmp;
     t_cmd   *curr;
@@ -40,7 +40,8 @@ void    free_cmds(t_data *data)
     while (curr)
     {
         tmp = curr->next;
-        free_cmd(curr);
+        if (curr != exception)
+            free_cmd(curr);
         curr = tmp;
     }
 }
@@ -49,5 +50,5 @@ void    free_all(t_data *data)
 {
     if (data->path)
         free_split(data->path);
-    free_cmds(data);
+    free_cmds(data, NULL);
 }

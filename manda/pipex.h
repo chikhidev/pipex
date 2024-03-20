@@ -30,6 +30,7 @@ typedef struct s_data
     int     exit_value;
     int     input_file;
     int     output_file;
+    int     null_fd;
 }   t_data;
 
 void    init(t_data *data);
@@ -45,6 +46,7 @@ void    execute_cmds(t_data *data);
 void    ft_free(void *ptr);
 void    free_split(char **split);
 void    free_cmd(t_cmd *cmd);
+void    free_cmds(t_data *data, t_cmd *exception);
 void    free_all(t_data *data);
 
 #endif

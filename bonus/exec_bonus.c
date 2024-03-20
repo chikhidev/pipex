@@ -1,57 +1,45 @@
 #include "./pipex_bonus.h"
 
-void    manage_fds(t_data *data, t_cmd *cmd)
+void    manage_io(t_data *data, t_cmd *cmd)
 {
-    if (cmd->prev)
+    if (cmd->prev == NULL && data->input_file == -1)
     {
+        printf("null_fd: %d\n", data->null_fd);
+        dup2(data->null_fd, STDIN_FILENO);
+    }
+    else if (cmd->prev)
         dup2(cmd->prev->entries[0], STDIN_FILENO);
-        close(cmd->prev->entries[0]);
-        close(cmd->prev->entries[1]);
-    }
     else
-    {
         dup2(data->input_file, STDIN_FILENO);
-        close(data->input_file);
-    }
     if (cmd->next)
-    {
         dup2(cmd->entries[1], STDOUT_FILENO);
-        close(cmd->entries[0]);
-        close(cmd->entries[1]);
-    }
     else
-    {
         dup2(data->output_file, STDOUT_FILENO);
-        close(data->output_file);
-    }
 }
 
 void    execute_cmd(t_data *data, t_cmd *cmd)
 {
-    if (data->input_file == -1 && cmd->prev == NULL)
-        return ft_close(&cmd->entries[1]);
     cmd->child_pid = fork();
-    if (cmd->child_pid < 0)
-        error(data, "fork failed");
+    if (cmd->child_pid == -1)
+        error(data, "Fork failed");
     if (cmd->child_pid == 0)
     {
+        manage_io(data, cmd);
+        free_cmds(data, cmd);
         ft_close(&cmd->entries[0]);
-        manage_fds(data, cmd);
-        // free_unused(data, cmd);
+        ft_close(&cmd->entries[1]);
         execve(cmd->path, cmd->args, data->env);
-        write(2, cmd->args[0], ft_strlen(cmd->args[0]));
+        write(2, cmd->path, ft_strlen(cmd->path));
         write(2, ": command not found\n", 21);
-        free_all(data);
-        exit(1);
+        free_cmd(cmd);
+        free_split(data->path);
+        exit(127);
     }
     else
     {
-        ft_close(&cmd->entries[1]);
-        for (t_cmd *tmp = cmd; tmp != NULL; tmp = tmp->prev)
-        {
-            ft_close(&tmp->entries[0]);
-            ft_close(&tmp->entries[1]);
-        }
+        close(cmd->entries[1]);
+        if (cmd->prev)
+        	close(cmd->prev->entries[0]);
     }
 }
 
