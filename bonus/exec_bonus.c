@@ -4,8 +4,8 @@ void    manage_io(t_data *data, t_cmd *cmd)
 {
     if (cmd->prev == NULL && data->input_file == -1)
     {
-        printf("null_fd: %d\n", data->null_fd);
-        dup2(data->null_fd, STDIN_FILENO);
+        free_all(data);
+        exit(1);
     }
     else if (cmd->prev)
         dup2(cmd->prev->entries[0], STDIN_FILENO);
@@ -29,17 +29,16 @@ void    execute_cmd(t_data *data, t_cmd *cmd)
         ft_close(&cmd->entries[0]);
         ft_close(&cmd->entries[1]);
         execve(cmd->path, cmd->args, data->env);
-        write(2, cmd->path, ft_strlen(cmd->path));
-        write(2, ": command not found\n", 21);
+        perror(cmd->path);
         free_cmd(cmd);
         free_split(data->path);
         exit(127);
     }
     else
     {
-        close(cmd->entries[1]);
+        ft_close(&cmd->entries[1]);
         if (cmd->prev)
-        	close(cmd->prev->entries[0]);
+        	ft_close(&cmd->prev->entries[0]);
     }
 }
 

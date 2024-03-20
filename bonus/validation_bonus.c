@@ -21,9 +21,6 @@ void    validate_in_out_files(t_data *data, int ac, char **av)
         if (data->output_file == -1)
             error(data, "Invalid output file");
     }
-    data->null_fd = open("/dev/null", O_RDONLY);
-    if (data->null_fd == -1)
-        error(data, "Open failed");
 }
 
 void    check_path_env(t_data *data)

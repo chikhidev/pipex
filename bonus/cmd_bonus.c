@@ -78,11 +78,14 @@ void    generate_cmds(t_data *data, char **av, int ac, int start)
     i = start;
     while (i < (ac - 1))
     {
-        args = ft_split(av[i], ' ');
-        if (!args)
-            error(data, "Failed to allocate memory (args)");
-        path = get_cmd_path(data, ft_strdup(args[0]));
-        create_cmd(data, path, args);
+        if (ft_strlen(av[i]) > 0)
+        {
+            args = ft_split(av[i], ' ');
+            if (!args)
+                error(data, "Failed to allocate memory (args)");
+            path = get_cmd_path(data, ft_strdup(args[0]));
+            create_cmd(data, path, args);
+        }
         i++;
     }
     cmd = data->head_cmd;

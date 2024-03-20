@@ -1,4 +1,4 @@
 - handle waitpid <done>
-- handle ./path
+- handle ./path haha
 - handle input file is not available
 - handle exit value
