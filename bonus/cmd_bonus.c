@@ -5,7 +5,7 @@ void    launch_pipe(t_data *data, t_cmd *cmd)
     if (cmd->next)
     {
         if (pipe(cmd->entries) == -1)
-            error(data, "pipe failed");
+            error(data, "Pipe");
     }
     else
     {

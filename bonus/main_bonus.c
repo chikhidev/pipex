@@ -2,11 +2,11 @@
 
 void    serve_normal_behav(t_data *data, char **av, int ac, char **env)
 {
-    validate_in_out_files(data, ac, av);
+    open_input_file(data, av);
     data->env = env;
     check_path_env(data);
     generate_cmds(data, av, ac, 2);
-    execute_cmds(data);
+    execute_cmds(data,ac, av);
     free_all(data);
     ft_close(&data->input_file);
     ft_close(&data->output_file);
@@ -46,7 +46,7 @@ int main(int ac, char **av, char **env)
         check_path_env(&data);
         generate_cmds(&data, av, ac, 3);
         get_input(&data);
-        execute_cmds(&data);
+        execute_cmds(&data, ac, av);
         ft_close(&data.here_doc_pipe[1]);
         ft_close(&data.here_doc_pipe[0]);
         free_all(&data);

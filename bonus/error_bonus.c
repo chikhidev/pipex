@@ -11,9 +11,7 @@ void    ft_close(int *fd)
 
 void    error(t_data *data, char *msg)
 {
-    write(2, "Error: ", 8);
-    write(2, msg, ft_strlen(msg));
-    write(2, "\n", 1);
+    perror(msg);
     free_all(data);
     exit(1);
 }

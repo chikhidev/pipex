@@ -54,13 +54,15 @@ void    wait_for_childs(t_data *data)
     }
 }
 
-void    execute_cmds(t_data *data)
+void    execute_cmds(t_data *data, int ac, char **av)
 {
     t_cmd   *curr_cmd;
 
     curr_cmd = data->head_cmd;
     while (curr_cmd)
     {
+        if (!curr_cmd->next)
+            open_output_file(data, ac, av);
         execute_cmd(data, curr_cmd);
         curr_cmd = curr_cmd->next;
     }
