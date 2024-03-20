@@ -13,13 +13,33 @@ void    open_output_file(t_data *data, int ac, char **av)
     {
         data->output_file = open(av[ac - 1], O_CREAT | O_WRONLY, 0644);
         if (data->output_file == -1)
-            error(data, av[ac - 1]);
+        {
+            perror(av[ac - 1]);
+            free_all(data);
+            exit(1);
+        }
+        if (access(av[ac - 1], W_OK) == -1)
+        {
+            perror(av[ac - 1]);
+            free_all(data);
+            exit(1);
+        }
     }
     else
     {
+        if (access(av[ac - 1], W_OK) == -1)
+        {
+            perror(av[ac - 1]);
+            free_all(data);
+            exit(1);
+        }
         data->output_file = open(av[ac - 1], O_WRONLY | O_TRUNC);
         if (data->output_file == -1)
-            error(data, av[ac - 1]);
+        {
+            perror(av[ac - 1]);
+            free_all(data);
+            exit(1);
+        }
     }
 }
 
