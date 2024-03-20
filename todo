@@ -1,4 +1,6 @@
 - handle waitpid <done>
 - handle ./path haha
-- handle input file is not available
+- handle input file is not available <done>
 - handle exit value
+- handle path costumized failing
+- inplemet here_doc

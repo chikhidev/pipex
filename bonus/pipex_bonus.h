@@ -25,7 +25,6 @@ typedef struct s_data
 {
     char    **env;
     t_cmd   *head_cmd;
-    int     path_available;
     char    **path;
     char    *limiter;
     int     here_doc_pipe[2];

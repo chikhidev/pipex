@@ -25,7 +25,6 @@ typedef struct s_data
 {
     char    **env;
     t_cmd   *head_cmd;
-    int     path_available;
     char    **path;
     int     exit_value;
     int     input_file;

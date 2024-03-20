@@ -21,7 +21,7 @@ char    *get_cmd_path(t_data *data, char *cmd)
     char *path;
 
     i = 0;
-    if (data->path_available)
+    if (data->path)
     {
         while (data->path[i])
         {
@@ -51,7 +51,7 @@ void    create_cmd(t_data *data, char *path, char **args)
 
     new = malloc(sizeof(t_cmd));
     if (!new)
-        error(data, "Failed to allocate memory (path)");
+        error(data, "Failed to allocate memory (cmd)");
     new->args = args;
     new->path = path;
     new->next = NULL;

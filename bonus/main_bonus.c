@@ -43,7 +43,6 @@ int main(int ac, char **av, char **env)
         data.input_file = data.here_doc_pipe[0];
         data.output_file = open(av[ac - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
         data.env = env;
-        check_path_env(&data);
         generate_cmds(&data, av, ac, 3);
         get_input(&data);
         execute_cmds(&data, ac, av);

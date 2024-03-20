@@ -24,7 +24,6 @@ void    make_output(t_data *data, int fd)
 
 void    init(t_data *data)
 {
-    data->path_available = 0;
     data->head_cmd = NULL;
     data->path = NULL;
     data->input_file = -1;

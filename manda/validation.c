@@ -53,11 +53,8 @@ void    check_path_env(t_data *data)
     {
         if (ft_strncmp(data->env[i], "PATH=", 5) == 0)
         {
-            path = ft_strchr(data->env[i], '/');
+            path = data->env[i] + 5;
             data->path = ft_split(path, ':');
-            if (!data->path)
-                error(data, "Failed to allocate memory (path)");
-            data->path_available = 1;
             return ;
         }
         i++;
