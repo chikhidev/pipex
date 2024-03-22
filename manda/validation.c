@@ -21,12 +21,14 @@ void    open_output_file(t_data *data, int ac, char **av)
         {
             perror(av[ac - 1]);
             data->output_file = null;
+            data->parent_error = 1;
             return ;
         }
         if (access(av[ac - 1], W_OK) == -1)
         {
             perror(av[ac - 1]);
             data->output_file = null;
+            data->parent_error = 1;
         }
     }
     else
@@ -35,6 +37,7 @@ void    open_output_file(t_data *data, int ac, char **av)
         {
             perror(av[ac - 1]);
             data->output_file = null;
+            data->parent_error = 1;
             return ;
         }
         data->output_file = open(av[ac - 1], O_WRONLY | O_TRUNC);
@@ -42,6 +45,7 @@ void    open_output_file(t_data *data, int ac, char **av)
         {
             perror(av[ac - 1]);
             data->output_file = null;
+            data->parent_error = 1;
         }
     }
 }

@@ -32,7 +32,8 @@ typedef struct s_data
     int     input_file;
     int     output_file;
     int     null_fd;
-    int     exit_value;
+    int     status;
+    int     parent_error;
 }   t_data;
 
 void    init(t_data *data);

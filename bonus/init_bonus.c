@@ -28,5 +28,6 @@ void    init(t_data *data)
     data->path = NULL;
     data->input_file = -1;
     data->output_file = -1;
-    data->exit_value = 0;
+    data->status = 0;
+    data->parent_error = 0;
 }

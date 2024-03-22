@@ -26,9 +26,10 @@ typedef struct s_data
     char    **env;
     t_cmd   *head_cmd;
     char    **path;
-    int     exit_value;
+    int     status;
     int     input_file;
     int     output_file;
+    int     parent_error;
 }   t_data;
 
 void    init(t_data *data);

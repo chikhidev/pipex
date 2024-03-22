@@ -14,5 +14,5 @@ void    error(t_data *data, char *msg)
     write(2, msg, ft_strlen(msg));
     write(2, "/n", 1);
     free_all(data);
-    exit(1);
+    exit(data->status >> 8);
 }

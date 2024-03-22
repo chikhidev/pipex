@@ -54,5 +54,7 @@ int main(int ac, char **av, char **env)
         serve_normal_behav(&data, av, ac, env);
     else
         error(&data, "Invalid number of arguments");
-    return (0);
+    if (data.parent_error != 0)
+        return (data.parent_error);
+    return (data.status >> 8);
 }

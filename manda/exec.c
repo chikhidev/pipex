@@ -52,7 +52,7 @@ void    wait_for_childs(t_data *data)
     tmp = data->head_cmd;
     while (tmp)
     {
-        waitpid(tmp->child_pid, NULL, 0);
+        waitpid(tmp->child_pid, &data->status, 0);
         tmp = tmp->next;
     }
 }
