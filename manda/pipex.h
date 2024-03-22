@@ -41,6 +41,7 @@ void    open_output_file(t_data *data, int ac, char **av);
 void    check_path_env(t_data *data);
 void    generate_cmds(t_data *data, char **av, int ac);
 void    launch_pipe(t_data *data, t_cmd *cmd);
+void    pre_execution(t_data *data, t_cmd *cmd);
 void    execute_cmds(t_data *data, int ac, char **av);
 void    ft_free(void *ptr);
 void    free_split(char **split);

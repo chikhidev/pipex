@@ -7,7 +7,8 @@ SRC = manda/main.c    \
       manda/memory.c  \
       manda/cmd.c     \
       manda/exec.c    \
-      manda/validation.c
+      manda/validation.c \
+	  manda/pre.c
 
 BSRC = bonus/main_bonus.c       \
        bonus/init_bonus.c       \
@@ -15,7 +16,8 @@ BSRC = bonus/main_bonus.c       \
        bonus/memory_bonus.c     \
        bonus/cmd_bonus.c        \
        bonus/exec_bonus.c       \
-       bonus/validation_bonus.c
+       bonus/validation_bonus.c \
+	   bonus/pre_bonus.c
 
 OBJ = $(SRC:.c=.o)
 BOBJ = $(BSRC:.c=.o)

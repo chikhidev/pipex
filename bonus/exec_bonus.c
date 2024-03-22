@@ -28,11 +28,14 @@ void    execute_cmd(t_data *data, t_cmd *cmd)
         free_cmds(data, cmd);
         ft_close(&cmd->entries[0]);
         ft_close(&cmd->entries[1]);
+        pre_execution(data, cmd);
         execve(cmd->path, cmd->args, data->env);
-        perror(cmd->path);
+        write(2, cmd->args[0], ft_strlen(cmd->args[0]));
+        write(2, "execve failed\n", 15);
+        write(2, "\n", 1);
         free_cmd(cmd);
         free_split(data->path);
-        exit(127);
+        exit(1);
     }
     else
     {
@@ -62,7 +65,10 @@ void    execute_cmds(t_data *data, int ac, char **av)
     while (curr_cmd)
     {
         if (!curr_cmd->next)
+        {
             open_output_file(data, ac, av);
+            // write(2, "executing last command\n", 23);
+        }
         execute_cmd(data, curr_cmd);
         curr_cmd = curr_cmd->next;
     }
