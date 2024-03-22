@@ -48,6 +48,7 @@ void    open_output_file(t_data *data, int ac, char **av)
             data->parent_error = 1;
         }
     }
+    ft_close(&null);
 }
 
 void    check_path_env(t_data *data)
