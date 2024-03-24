@@ -9,25 +9,18 @@ void    open_input_file(t_data *data, char **av)
 
 void    open_output_file(t_data *data, int ac, char **av)
 {
-    int null;
-
-    null = open("/dev/null", O_WRONLY | O_TRUNC);
-    if (null == -1)
-        error(data, "Open failed");
     if (access(av[ac - 1], F_OK) == -1)
     {
         data->output_file = open(av[ac - 1], O_CREAT | O_WRONLY, 0644);
         if (data->output_file == -1)
         {
             perror(av[ac - 1]);
-            data->output_file = null;
             data->parent_error = 1;
             return ;
         }
         if (access(av[ac - 1], W_OK) == -1)
         {
             perror(av[ac - 1]);
-            data->output_file = null;
             data->parent_error = 1;
         }
     }
@@ -36,7 +29,6 @@ void    open_output_file(t_data *data, int ac, char **av)
         if (access(av[ac - 1], W_OK) == -1)
         {
             perror(av[ac - 1]);
-            data->output_file = null;
             data->parent_error = 1;
             return ;
         }
@@ -44,11 +36,9 @@ void    open_output_file(t_data *data, int ac, char **av)
         if (data->output_file == -1)
         {
             perror(av[ac - 1]);
-            data->output_file = null;
             data->parent_error = 1;
         }
     }
-    ft_close(&null);
 }
 
 void    check_path_env(t_data *data)

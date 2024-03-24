@@ -66,7 +66,13 @@ void    execute_cmds(t_data *data, int ac, char **av)
     {
         if (!curr_cmd->next)
             open_output_file(data, ac, av);
-        execute_cmd(data, curr_cmd);
+        if (data->parent_error == 0)
+            execute_cmd(data, curr_cmd);
+        else
+        {
+            ft_close(&data->input_file);
+            ft_close(&data->output_file);
+        }
         curr_cmd = curr_cmd->next;
     }
     wait_for_childs(data);
