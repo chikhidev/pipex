@@ -1,7 +1,0 @@
-- handle waitpid <done>
-- handle ./path haha <done>
-- handle input file is not available <done>
-- handle exit value
-- handle path costumized failing <done>
-- make here_doc work
-- "" command
