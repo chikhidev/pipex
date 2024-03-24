@@ -29,26 +29,35 @@ void    get_input(t_data *data)
     ft_free(line);
 }
 
+void    serve_here_doc(t_data *data, char **av, int ac, char **env)
+{
+    printf("here_doc is called\n");
+    data->limiter = av[2];
+    if (pipe(data->here_doc_pipe) == -1)
+        error(data, "Pipe failed");
+    data->input_file = data->here_doc_pipe[0];
+    printf("input file is %d\n", data->input_file);
+    // data->output_file = open(av[ac - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    data->env = env;
+    check_path_env(data);
+    generate_cmds(data, av, ac, 3);
+    get_input(data);
+
+    execute_cmds(data, ac, av);
+    free_all(data);
+}
+
 int main(int ac, char **av, char **env)
 {
     t_data data;
 
     init(&data);
-    if (ac >= 5 && ft_strncmp(av[1], "here_doc", 9) == 0)
+    if (ac >= 2 && ft_strncmp(av[1], "here_doc", 9) == 0)
     {
-        printf("here_doc is called\n");
-        data.limiter = av[2];
-        if (pipe(data.here_doc_pipe) == -1)
-            error(&data, "Pipe failed");
-        data.input_file = data.here_doc_pipe[0];
-        data.output_file = open(av[ac - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
-        data.env = env;
-        generate_cmds(&data, av, ac, 3);
-        get_input(&data);
-        execute_cmds(&data, ac, av);
-        ft_close(&data.here_doc_pipe[1]);
-        ft_close(&data.here_doc_pipe[0]);
-        free_all(&data);
+        if (ac >= 5)
+            serve_here_doc(&data, av, ac, env);
+        else 
+            error(&data, "Invalid number of arguments");
     }
     else if (ac >= 5)
         serve_normal_behav(&data, av, ac, env);

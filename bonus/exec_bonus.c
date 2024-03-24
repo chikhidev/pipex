@@ -15,6 +15,8 @@ void    manage_io(t_data *data, t_cmd *cmd)
         dup2(cmd->entries[1], STDOUT_FILENO);
     else
         dup2(data->output_file, STDOUT_FILENO);
+    ft_close(&data->input_file);
+    ft_close(&data->output_file);
 }
 
 void    execute_cmd(t_data *data, t_cmd *cmd)
@@ -69,11 +71,10 @@ void    execute_cmds(t_data *data, int ac, char **av)
             open_output_file(data, ac, av);
         if (data->parent_error == 0)
             execute_cmd(data, curr_cmd);
-        else
+        if (curr_cmd->prev)
         {
-            ft_close(&data->input_file);
-            ft_close(&curr_cmd->entries[0]);
-            ft_close(&curr_cmd->entries[1]);
+            ft_close(&curr_cmd->prev->entries[0]);
+            ft_close(&curr_cmd->prev->entries[1]);
         }
         curr_cmd = curr_cmd->next;
     }
