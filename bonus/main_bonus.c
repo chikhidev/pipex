@@ -16,14 +16,16 @@ void    get_input(t_data *data)
 {
     char *line;
 
+    write(1, "> ", 2);
     line = get_next_line(STDIN_FILENO, data->limiter);
     while (line)
     {
         if (ft_strncmp(line, data->limiter, ft_strlen(data->limiter)) == 0 &&
             ft_strlen(data->limiter) == (ft_strlen(line) - 1))
             return ft_free(line);
-        write(data->input_file, line, ft_strlen(line));
+        write(data->here_doc_pipe[1], line, ft_strlen(line));
         ft_free(line);
+        write(1, "> ", 2);
         line = get_next_line(STDIN_FILENO, data->limiter);
     }
     ft_free(line);
@@ -31,17 +33,16 @@ void    get_input(t_data *data)
 
 void    serve_here_doc(t_data *data, char **av, int ac, char **env)
 {
-    printf("here_doc is called\n");
     data->limiter = av[2];
     if (pipe(data->here_doc_pipe) == -1)
         error(data, "Pipe failed");
-    data->input_file = data->here_doc_pipe[0];
-    printf("input file is %d\n", data->input_file);
-    // data->output_file = open(av[ac - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+
     data->env = env;
     check_path_env(data);
     generate_cmds(data, av, ac, 3);
     get_input(data);
+    data->input_file = data->here_doc_pipe[0];
+    ft_close(&data->here_doc_pipe[1]);
 
     execute_cmds(data, ac, av);
     free_all(data);

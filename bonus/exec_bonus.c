@@ -15,6 +15,7 @@ void    manage_io(t_data *data, t_cmd *cmd)
         dup2(cmd->entries[1], STDOUT_FILENO);
     else
         dup2(data->output_file, STDOUT_FILENO);
+
     ft_close(&data->input_file);
     ft_close(&data->output_file);
 }

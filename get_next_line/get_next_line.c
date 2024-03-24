@@ -90,7 +90,9 @@ char	*get_next_line(int fd, char *limiter)
 		return (NULL);
 	if (!store_line(&saved, &store, fd))
 		return (NULL);
-	if (ft_strncmp(store.line, limiter, ft_strlen(limiter)) == 0 && ft_strlen(limiter) == (ft_strlen(store.line) - 1))
+	if (store.line &&
+		ft_strncmp(store.line, limiter, ft_strlen(limiter)) == 0 &&
+		ft_strlen(limiter) == (ft_strlen(store.line) - 1))
 		free(saved);
 	return (store.line);
 }
