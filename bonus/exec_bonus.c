@@ -52,7 +52,8 @@ void    wait_for_childs(t_data *data)
     tmp = data->head_cmd;
     while (tmp)
     {
-        waitpid(tmp->child_pid, &data->status, 0);
+        if (tmp->child_pid != -1)
+            waitpid(tmp->child_pid, &data->status, 0);
         tmp = tmp->next;
     }
 }
@@ -71,7 +72,8 @@ void    execute_cmds(t_data *data, int ac, char **av)
         else
         {
             ft_close(&data->input_file);
-            ft_close(&data->output_file);
+            ft_close(&curr_cmd->entries[0]);
+            ft_close(&curr_cmd->entries[1]);
         }
         curr_cmd = curr_cmd->next;
     }

@@ -58,6 +58,7 @@ void    create_cmd(t_data *data, char *path, char **args)
     new->args = args;
     new->path = path;
     new->next = NULL;
+    new->child_pid = -1;
     if (!data->head_cmd)
     {
         new->prev = NULL;
