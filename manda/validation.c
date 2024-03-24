@@ -11,7 +11,7 @@ void    open_output_file(t_data *data, int ac, char **av)
 {
     if (access(av[ac - 1], F_OK) == -1)
     {
-        data->output_file = open(av[ac - 1], O_CREAT | O_WRONLY, 0644);
+        data->output_file = open(av[ac - 1], O_CREAT | O_WRONLY, 0666);
         if (data->output_file == -1)
         {
             perror(av[ac - 1]);
