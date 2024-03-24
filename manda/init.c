@@ -1,33 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abchikhi <abchikhi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/24 19:47:05 by abchikhi          #+#    #+#             */
+/*   Updated: 2024/03/24 19:47:06 by abchikhi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "./pipex.h"
 
-void    make_input(t_data *data, int  fd)
+void	make_input(t_data *data, int fd)
 {
-    if (fd == -1)
-    {
-        dup2(STDIN_FILENO, 0);
-        return;
-    }
-    if (dup2(fd, STDIN_FILENO) == - 1)
-        error(data, "dup2 failed");
+	if (fd == -1)
+	{
+		dup2(STDIN_FILENO, 0);
+		return ;
+	}
+	if (dup2(fd, STDIN_FILENO) == -1)
+		error(data, "dup2 failed");
 }
 
-void    make_output(t_data *data, int fd)
+void	make_output(t_data *data, int fd)
 {
-    if (fd == -1)
-    {
-        dup2(STDOUT_FILENO, 1);
-        return;
-    }
-    if (dup2(fd, STDOUT_FILENO) == -1)
-        error(data, "dup2 failed");
+	if (fd == -1)
+	{
+		dup2(STDOUT_FILENO, 1);
+		return ;
+	}
+	if (dup2(fd, STDOUT_FILENO) == -1)
+		error(data, "dup2 failed");
 }
 
-void    init(t_data *data)
+void	init(t_data *data)
 {
-    data->head_cmd = NULL;
-    data->path = NULL;
-    data->input_file = -1;
-    data->output_file = -1;
-    data->status = 0;
-    data->parent_error = 0;
+	data->head_cmd = NULL;
+	data->path = NULL;
+	data->input_file = -1;
+	data->output_file = -1;
+	data->status = 0;
+	data->parent_error = 0;
 }

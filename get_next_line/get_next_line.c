@@ -6,7 +6,7 @@
 /*   By: abchikhi <abchikhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 16:13:43 by abchikhi          #+#    #+#             */
-/*   Updated: 2023/11/30 18:09:06 by abchikhi         ###   ########.fr       */
+/*   Updated: 2024/03/24 19:52:36 by abchikhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	extract_line(t_store *store, char **saved, int is_last)
 {
-	int	to_return;
+	int	to_return ;
 
 	to_return = 1;
 	if (is_last)
 	{
-		if (! *saved || **saved == '\0')
+		if (!*saved || **saved == '\0')
 			to_return = 0;
 		else
 			store->line = ft_strdup(*saved);
@@ -30,8 +30,8 @@ int	extract_line(t_store *store, char **saved, int is_last)
 	else
 	{
 		store->line = ft_substr(*saved, 0, store->new_line_pos - *saved + 1);
-		store->temp = ft_substr(store->new_line_pos,
-				1, ft_strlen(store->new_line_pos));
+		store->temp = ft_substr(store->new_line_pos, 1,
+				ft_strlen(store->new_line_pos));
 		free(*saved);
 		*saved = store->temp;
 	}
@@ -90,9 +90,8 @@ char	*get_next_line(int fd, char *limiter)
 		return (NULL);
 	if (!store_line(&saved, &store, fd))
 		return (NULL);
-	if (store.line &&
-		ft_strncmp(store.line, limiter, ft_strlen(limiter)) == 0 &&
-		ft_strlen(limiter) == (ft_strlen(store.line) - 1))
+	if (store.line && ft_strncmp(store.line, limiter, ft_strlen(limiter)) == 0
+		&& ft_strlen(limiter) == (ft_strlen(store.line) - 1))
 		free(saved);
 	return (store.line);
 }
